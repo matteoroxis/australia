@@ -1,0 +1,1587 @@
+<title>Australia — Viaggio di nozze, 28 dic 2026 → 21 gen 2027</title>
+
+<style>
+  :root {
+    --paper:      #F0F3F0;
+    --surface:    #FFFFFF;
+    --surface-2:  #E4EAE7;
+    --ink:        #0C252C;
+    --ink-soft:   #3A5A61;
+    --muted:      #6B8189;
+    --rule:       #C7D3D1;
+    --accent:     #0B7D8E;
+    --accent-ink: #085C69;
+    --accent-wash:#DDEDEF;
+    --warn:       #B0551F;
+    --warn-wash:  #F6E7DA;
+    --good:       #2F6B4F;
+
+    --f-display: "Avenir Next", "Avenir", "Futura", "Century Gothic", "Trebuchet MS", sans-serif;
+    --f-body: "Charter", "Iowan Old Style", Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    --f-data: "SF Mono", "Cascadia Mono", Consolas, "DejaVu Sans Mono", Menlo, monospace;
+
+    --measure: 40rem;
+    --rail: 5.5rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:      #08161A;
+      --surface:    #0E2229;
+      --surface-2:  #16323A;
+      --ink:        #DCE8E7;
+      --ink-soft:   #A8C0C1;
+      --muted:      #7A959A;
+      --rule:       #23434C;
+      --accent:     #3FB6C7;
+      --accent-ink: #7FD4E0;
+      --accent-wash:#0F343C;
+      --warn:       #E29455;
+      --warn-wash:  #33231A;
+      --good:       #6FBE93;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --paper:      #08161A;
+    --surface:    #0E2229;
+    --surface-2:  #16323A;
+    --ink:        #DCE8E7;
+    --ink-soft:   #A8C0C1;
+    --muted:      #7A959A;
+    --rule:       #23434C;
+    --accent:     #3FB6C7;
+    --accent-ink: #7FD4E0;
+    --accent-wash:#0F343C;
+    --warn:       #E29455;
+    --warn-wash:  #33231A;
+    --good:       #6FBE93;
+  }
+
+  :root[data-theme="light"] {
+    --paper:      #F0F3F0;
+    --surface:    #FFFFFF;
+    --surface-2:  #E4EAE7;
+    --ink:        #0C252C;
+    --ink-soft:   #3A5A61;
+    --muted:      #6B8189;
+    --rule:       #C7D3D1;
+    --accent:     #0B7D8E;
+    --accent-ink: #085C69;
+    --accent-wash:#DDEDEF;
+    --warn:       #B0551F;
+    --warn-wash:  #F6E7DA;
+    --good:       #2F6B4F;
+  }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 17px;
+    line-height: 1.62;
+    overflow-x: hidden;
+  }
+
+  .wrap {
+    max-width: calc(var(--measure) + var(--rail) + 3rem);
+    margin: 0 auto;
+    padding: 0 1.25rem 6rem;
+  }
+
+  a { color: var(--accent-ink); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, summary:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    padding: 4.5rem 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .eyebrow {
+    font-family: var(--f-data);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: var(--f-display);
+    font-size: clamp(2.4rem, 7vw, 3.9rem);
+    line-height: 1.02;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+    margin: 0;
+  }
+
+  h1 em {
+    font-style: normal;
+    display: block;
+    color: var(--accent-ink);
+  }
+
+  .dek {
+    font-size: 1.12rem;
+    color: var(--ink-soft);
+    max-width: 34rem;
+    margin: 0;
+  }
+
+  .chain {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 0.55rem;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    font-family: var(--f-data);
+    font-size: 0.82rem;
+    letter-spacing: 0.05em;
+  }
+  .node {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .node.hub { color: var(--muted); font-weight: 400; }
+  .link { color: var(--accent); }
+  .link.road { color: var(--warn); }
+  .link.train { color: var(--ink-soft); }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    gap: 1.5rem 1rem;
+    padding-top: 0.5rem;
+  }
+  .stat b {
+    display: block;
+    font-family: var(--f-display);
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.1;
+    font-variant-numeric: tabular-nums;
+  }
+  .stat span {
+    font-family: var(--f-data);
+    font-size: 0.68rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- sections ---------- */
+
+  section { padding-top: 3.5rem; }
+
+  h2 {
+    font-family: var(--f-display);
+    font-size: clamp(1.5rem, 3.6vw, 2rem);
+    font-weight: 600;
+    letter-spacing: -0.015em;
+    line-height: 1.15;
+    text-wrap: balance;
+    margin: 0 0 0.5rem;
+  }
+
+  h3 {
+    font-family: var(--f-display);
+    font-size: 1.12rem;
+    font-weight: 600;
+    letter-spacing: -0.005em;
+    margin: 0 0 0.35rem;
+  }
+
+  .lede {
+    color: var(--ink-soft);
+    max-width: var(--measure);
+    margin: 0 0 1.5rem;
+  }
+
+  p { max-width: var(--measure); }
+
+  /* ---------- flags ---------- */
+
+  .flags {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .flag {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 3px solid var(--warn);
+    padding: 1.15rem 1.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .flag.ok { border-left-color: var(--good); }
+  .flag > p { margin: 0; }
+  .flag .verdict {
+    font-family: var(--f-data);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--warn);
+  }
+  .flag.ok .verdict { color: var(--good); }
+
+  /* ---------- itinerary spine ---------- */
+
+  .leg {
+    display: grid;
+    grid-template-columns: var(--rail) 1fr;
+    gap: 0 1.75rem;
+    position: relative;
+    padding-bottom: 2.75rem;
+  }
+  .leg::before {
+    content: "";
+    position: absolute;
+    left: calc(var(--rail) + 0.75rem);
+    top: 0.6rem;
+    bottom: 0;
+    width: 1px;
+    background: var(--rule);
+  }
+  .leg:last-of-type::before { bottom: 2.75rem; }
+
+  .when {
+    font-family: var(--f-data);
+    font-size: 0.72rem;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: right;
+    padding-top: 0.3rem;
+    position: relative;
+  }
+  .when strong {
+    display: block;
+    color: var(--accent-ink);
+    font-size: 0.86rem;
+    letter-spacing: 0.03em;
+  }
+  .when::after {
+    content: "";
+    position: absolute;
+    right: -1.05rem;
+    top: 0.62rem;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--accent);
+  }
+
+  .body { min-width: 0; }
+
+  /* ---------- days ---------- */
+
+  .days {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    margin: 1.1rem 0 0;
+    padding: 0;
+  }
+  .days > li {
+    display: grid;
+    grid-template-columns: 4.4rem 1fr;
+    gap: 0 0.9rem;
+    align-items: baseline;
+  }
+  .days .d {
+    font-family: var(--f-data);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .days .t { min-width: 0; }
+  .days .t b { font-weight: 600; }
+
+  /* ---------- flight card ---------- */
+
+  .segs {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    margin: 1.1rem 0;
+    overflow-x: auto;
+  }
+  .seg {
+    display: grid;
+    grid-template-columns: 6.2rem 1fr auto;
+    gap: 0.35rem 1rem;
+    align-items: baseline;
+    padding: 0.8rem 1.1rem;
+    font-family: var(--f-data);
+    font-size: 0.82rem;
+    font-variant-numeric: tabular-nums;
+    min-width: 26rem;
+  }
+  .seg + .seg { border-top: 1px solid var(--rule); }
+  .seg .code { color: var(--accent-ink); font-weight: 600; letter-spacing: 0.04em; }
+  .seg .route { color: var(--ink); }
+  .seg .time { color: var(--ink-soft); white-space: nowrap; }
+  .seg.note {
+    grid-template-columns: 1fr;
+    background: var(--surface-2);
+    color: var(--ink-soft);
+    font-size: 0.76rem;
+    line-height: 1.5;
+  }
+
+  /* ---------- option blocks ---------- */
+
+  .opts {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.2rem 0;
+  }
+  .opt {
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    padding: 1.15rem 1.3rem;
+  }
+  .opt.pick {
+    border-color: var(--accent);
+    background: var(--accent-wash);
+  }
+  .opt > h3 { margin-bottom: 0.15rem; }
+  .opt .tag {
+    font-family: var(--f-data);
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.7rem;
+  }
+  .opt.pick .tag { color: var(--accent-ink); }
+  .opt p:last-child { margin-bottom: 0; }
+  .opt p { margin: 0.5rem 0 0; }
+
+  ul.plain {
+    list-style: none;
+    padding: 0;
+    margin: 0.7rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+    max-width: var(--measure);
+  }
+  ul.plain > li {
+    padding-left: 1.05rem;
+    position: relative;
+  }
+  ul.plain > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.72em;
+    width: 5px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  /* ---------- dove dormire, base per base ---------- */
+
+  .stays {
+    display: flex;
+    flex-direction: column;
+    margin: 1.4rem 0 2rem;
+    border-top: 1px solid var(--rule);
+  }
+  .stay {
+    padding: 1.3rem 0 1.4rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .stay > .head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.35rem 0.9rem;
+  }
+  .stay h3 { margin: 0; }
+  .stay .nights {
+    font-family: var(--f-data);
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .stay .mode {
+    font-family: var(--f-data);
+    font-size: 0.65rem;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    padding: 0.22rem 0.5rem 0.18rem;
+    border: 1px solid currentColor;
+    white-space: nowrap;
+    margin-left: auto;
+    align-self: center;
+  }
+  .stay .mode.foot { color: var(--accent-ink); }
+  .stay .mode.car { color: var(--warn); }
+  .stay > p { margin: 0.6rem 0 0; }
+  .stay .days { margin-top: 0.75rem; }
+
+  /* ---------- tables ---------- */
+
+  .scroller {
+    overflow-x: auto;
+    margin: 1.2rem 0;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+  }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 33rem;
+    font-size: 0.9rem;
+  }
+  th, td {
+    text-align: left;
+    padding: 0.7rem 1rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--rule);
+  }
+  thead th {
+    font-family: var(--f-data);
+    font-size: 0.67rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 400;
+    background: var(--surface-2);
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num {
+    font-family: var(--f-data);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    color: var(--ink-soft);
+  }
+  td.when-col.done {
+    color: var(--good);
+  }
+  td.when-col {
+    font-family: var(--f-data);
+    font-size: 0.76rem;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+    color: var(--accent-ink);
+  }
+  tfoot td {
+    font-weight: 600;
+    background: var(--surface-2);
+    border-bottom: none;
+  }
+
+  /* ---------- facts grid ---------- */
+
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.3rem 1.75rem;
+    margin-top: 1.2rem;
+  }
+  .fact > h3 {
+    font-size: 0.72rem;
+    font-family: var(--f-data);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+  }
+  .fact > p { margin: 0; font-size: 0.94rem; }
+
+  /* ---------- map ---------- */
+
+  .mapwrap {
+    margin: 1.5rem 0 0;
+    max-width: var(--measure);
+  }
+  .mapwrap svg { width: 100%; height: auto; display: block; }
+
+  .land  { fill: var(--surface-2); stroke: var(--rule); stroke-width: 1.3; stroke-linejoin: round; }
+  .fly   { fill: none; stroke: var(--accent); stroke-width: 1.7; stroke-dasharray: 6 5; opacity: 0.8; }
+  .fly.far { opacity: 0.3; }
+  .road  { fill: none; stroke: var(--warn); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .rail  { fill: none; stroke: var(--ink-soft); stroke-width: 1.3; stroke-dasharray: 2 3; opacity: 0.8; }
+  .base  { fill: var(--accent); stroke: var(--paper); stroke-width: 1.6; }
+  .poi   { fill: var(--paper); stroke: var(--ink-soft); stroke-width: 1.7; }
+  .lbl   { font-family: var(--f-data); font-size: 13px; fill: var(--ink); }
+  .lbl.sm { font-size: 10.5px; fill: var(--muted); letter-spacing: 0.04em; }
+
+  .legmap { margin: 1.3rem 0 0.2rem; }
+  .legmap svg { width: 100%; height: auto; display: block; }
+
+  .coast { fill: none; stroke: var(--rule); stroke-width: 1.7; stroke-linejoin: round; stroke-linecap: round; }
+  .water { fill: none; stroke: var(--accent-wash); stroke-width: 10; stroke-linecap: round; stroke-linejoin: round; }
+  .isl   { fill: var(--surface-2); stroke: var(--rule); stroke-width: 1.3; }
+  .sea   { font-family: var(--f-data); font-size: 11px; fill: var(--muted); letter-spacing: 0.2em; }
+  .dist  { font-family: var(--f-data); font-size: 10.5px; fill: var(--warn); }
+  .dist.air { fill: var(--accent); }
+  .dist.trn { fill: var(--ink-soft); }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.4rem;
+    margin-top: 1.2rem;
+    font-family: var(--f-data);
+    font-size: 0.72rem;
+    letter-spacing: 0.04em;
+    color: var(--muted);
+  }
+  .legend > span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .key {
+    display: inline-block;
+    width: 22px;
+    height: 3px;
+    flex: none;
+    background: var(--warn);
+  }
+  .key.fly {
+    background: none;
+    border-top: 2px dashed var(--accent);
+    height: 0;
+  }
+  .key.rail {
+    background: none;
+    border-top: 2px dotted var(--ink-soft);
+    height: 0;
+  }
+  .key.dot {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  .key.ring {
+    width: 11px; height: 11px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 1.8px solid var(--ink-soft);
+  }
+
+  /* ---------- misc ---------- */
+
+  .rule { border: 0; border-top: 1px solid var(--rule); margin: 3.5rem 0 0; }
+
+  code, .mono {
+    font-family: var(--f-data);
+    font-size: 0.88em;
+    background: var(--surface-2);
+    padding: 0.08em 0.35em;
+    border-radius: 2px;
+  }
+
+  footer {
+    padding-top: 3rem;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  footer p { max-width: var(--measure); }
+
+  @media (max-width: 40rem) {
+    :root { --rail: 0rem; }
+    body { font-size: 16px; }
+    .leg {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      padding-left: 1.15rem;
+    }
+    .leg::before { left: 0; top: 0.9rem; }
+    .when {
+      text-align: left;
+      padding-top: 0;
+    }
+    .when strong { display: inline; margin-right: 0.5rem; }
+    .when::after { right: auto; left: -1.5rem; top: 0.35rem; }
+    .days > li { grid-template-columns: 1fr; gap: 0.1rem; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Viaggio di nozze · 25 giorni · estate australe</p>
+    <h1>Roma → Australia<em>Natale a casa, capodanno a Melbourne</em></h1>
+    <p class="dek">Dal 28 dicembre 2026 al 21 gennaio 2027. Melbourne per il capodanno, Sydney senza fretta, la risalita lungo la costa senza mai una tratta sopra le tre ore, una settimana sulla Barriera Corallina, e la Great Ocean Road in chiusura, quando la strada è tornata libera. Ventidue notti, tutte in Australia.</p>
+
+    <div class="chain">
+      <span class="node">FCO</span><span class="link">✈</span>
+      <span class="node hub">AUH</span><span class="link">✈</span>
+      <span class="node">MEL</span><span class="link">✈</span>
+      <span class="node">SYD</span><span class="link train">▭</span>
+      <span class="node hub">NTL</span><span class="link road">▬</span>
+      <span class="node">BNE</span><span class="link">✈</span>
+      <span class="node">PPP</span><span class="link">✈</span>
+      <span class="node">MEL</span><span class="link">✈</span>
+      <span class="node hub">AUH</span><span class="link">✈</span>
+      <span class="node">FCO</span>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>25</b><span>giorni</span></div>
+      <div class="stat"><b>7</b><span>tratte aeree</span></div>
+      <div class="stat"><b>~1.600</b><span>km in auto</span></div>
+      <div class="stat"><b>9</b><span>basi notte</span></div>
+    </div>
+  </header>
+
+  <section id="verifiche">
+    <h2>Le decisioni che hanno fatto questo piano</h2>
+    <p class="lede">Il viaggio è costruito attorno a quattro scelte, e vale la pena averle chiare prima di cominciare a prenotare: sono la ragione per cui certe cose non si spostano.</p>
+
+    <div class="flags">
+
+      <div class="flag ok">
+        <span class="verdict">Il capodanno</span>
+        <h3>A Melbourne è gratis, e Sydney torna a costare il giusto</h3>
+        <p>Il 31 siete a Melbourne, dove le <b>Celebration Zone</b> del comune sono libere e senza prenotazione: Docklands, Flagstaff Gardens, Kings Domain, Treasury Gardens. Fuochi alle 21:30 e a mezzanotte, quattordici minuti sparati dai tetti del centro, trasporti pubblici gratis dalle 18:00 alle 6:00. E a Sydney arrivate il <b>1° gennaio</b> a festa finita, quindi niente prezzi da veglione e nessun minimo di soggiorno: le camere che a cavallo del 31 sarebbero state irraggiungibili tornano prenotabili. Da sola, questa scelta vale circa <b>900 €</b>.</p>
+      </div>
+
+      <div class="flag ok">
+        <span class="verdict">Biglietti emessi</span>
+        <h3>Ventidue notti in Australia, e nessuna sosta ad Abu Dhabi</h3>
+        <p>Il volo <b>è acquistato</b>. Si parte da Fiumicino <b>lunedì 28 dicembre alle 10:25</b> e si atterra a Melbourne il <b>29 alle 17:00</b>. Il rientro parte da Melbourne <b>mercoledì 20 gennaio alle 18:20</b> e arriva a Fiumicino il <b>21 alle 05:40</b>. In mezzo ci stanno 22 notti.</p>
+        <p>Il ritorno è <b>21h20 con un solo scalo</b>, cioè una coincidenza secca ad Abu Dhabi: niente notte d'albergo, niente giornata in città. Si dorme in aereo e si atterra a Roma all'alba, con l'intera giornata davanti per rimettersi.</p>
+        <p>Da qui in avanti le date sono <b>fisse</b>: tutto il resto del documento si incastra su queste due, e non ci sono più scelte da fare sull'ossatura del viaggio.</p>
+      </div>
+
+      <div class="flag ok">
+        <span class="verdict">Da qui cambia la priorità</span>
+        <h3>Con i voli in mano, il collo di bottiglia è dormire</h3>
+        <p>Finché i biglietti erano da comprare, l'urgenza era quella. Adesso l'unica cosa che può ancora rovinarvi il piano è <b>non trovare i letti nelle date rigide</b>. Melbourne è sistemata — <b>Atlantis Hotel, 403 € per le quattro notti di capodanno</b> — e la Great Ocean Road non è più un problema, perché è stata spostata a metà gennaio. Resta <b>una</b> data davvero difficile: il <b>9 e il 10 gennaio a Byron Bay</b>. È lo stesso meccanismo del capodanno su un'altra costa — paese di moda, alta stagione, pochi letti — e cade su sabato e domenica. Quella cercatela per prima, e allargate subito a Suffolk Park e Lennox Head.</p>
+        <p>Subito dopo vengono il <b>noleggio Newcastle → Brisbane</b>, le <b>sei notti ad Airlie Beach</b> e le <b>due notti sulla Great Ocean Road</b> del 17 e 18. Il resto ha tempo fino all'autunno.</p>
+      </div>
+
+      <div class="flag ok">
+        <span class="verdict">La modifica più importante del piano</span>
+        <h3>La Great Ocean Road è passata dall'inizio alla fine</h3>
+        <p>Era in apertura, il 1° e il 2 gennaio. Era il posto sbagliato per tre ragioni che si sommavano: gli <b>alloggi introvabili</b> — Apollo Bay a capodanno è semplicemente fuori mercato — la <b>strada intasata</b>, perché il 1° gennaio è il giorno più trafficato dell'anno sulla Great Ocean Road, e la <b>guida a sinistra al terzo giorno</b> di viaggio, su una strada di tornanti, con dieci ore di fuso ancora addosso.</p>
+        <p>Spostandola in coda, al <b>17–19 gennaio</b>, e traslando tutto il resto, i tre problemi spariscono insieme. A metà gennaio è ancora alta stagione ma il picco è passato, la strada è tornata percorribile, e ci arrivate dopo <b>milleseicento chilometri di pratica</b> sulla costa del New South Wales. In più la costa guadagna <b>due notti invece di una</b>, l'auto si ritira <b>in aeroporto</b> appena scesi da Proserpine, e le tre notti già prenotate all'Atlantis coprono esattamente il blocco di apertura senza aggiungere nulla.</p>
+        <p>Con la quarta notte aggiunta all'Atlantis il conto si è ridotto quasi a zero. Sydney non tocca più la notte del 1° gennaio, il volo interno non cade più nel giorno di rientro di massa, e Byron Bay è passata da venerdì-sabato a <b>sabato e domenica</b>, che è meno peggio. Resta <b>una</b> cosa da accettare: alla fine <b>non c'è più una giornata libera a Melbourne</b>, perché le tre notti finali sono due sulla costa e una in città. Le gite in Victoria si sono spostate in apertura, sul 30 dicembre e sul 1° gennaio, dove adesso ci stanno comodamente.</p>
+      </div>
+
+      <div class="flag">
+        <span class="verdict">Semplificato</span>
+        <h3>Magnetic Island è uscita dal piano, e il Queensland ci ha guadagnato</h3>
+        <p>Con il rientro anticipato al 20, sull'isola sarebbe rimasta <b>una notte sola</b>: mezza giornata di trasferimento — quattro ore e mezza di pullman più il traghetto — per un pomeriggio e un'alba. Non regge il rapporto tra quello che costa e quello che dà, e infatti è saltata.</p>
+        <p>Il guadagno però non è solo negativo. Senza Magnetic Island <b>non c'è più nessuna ragione di arrivare a Townsville</b>, quindi si entra e si esce dallo stesso aeroporto: Proserpine. Il Queensland diventa <b>sei notti con un letto solo</b>, senza pullman, senza traghetti di trasferimento e senza rifare le valigie a metà. E la notte liberata non si perde: va sulla <b>veleggiata con pernottamento fra le isole</b>, che era già la cosa che consigliavo di più e che adesso non toglie niente a nessuno.</p>
+        <p>Quello che lasciate indietro sono i <b>koala del Forts Walk</b>, che era la ragione vera per andare sull'isola. Vale la pena saperlo: nel resto del viaggio i koala selvatici li vedete a <b>Kennett River</b>, sulla Great Ocean Road, il 1° gennaio.</p>
+      </div>
+
+      <div class="flag">
+        <span class="verdict">Cosa lasciate a casa</span>
+        <h3>Il 26 dicembre australiano</h3>
+        <p>Partendo il 28 vi perdete il <b>Boxing Day Test al MCG</b>, che è l'evento sportivo dell'anno in Australia, e la <b>partenza della Sydney–Hobart</b> dal porto di Sydney. E niente Natale a Bondi, che è un'istituzione locale. Sono tre cose belle, ma nessuna vale da sola un giorno di ferie — e in cambio il Natale lo passate in famiglia in Italia, invece di buttare il 25 in un paese dove è chiuso tutto.</p>
+      </div>
+
+      <div class="flag ok">
+        <span class="verdict">Risolto</span>
+        <h3>Il tratto in auto non è più il pezzo faticoso del viaggio</h3>
+        <p>Era 940 km in quattro notti, con un letto diverso ogni sera e una giornata da 390 km. Ora sono due modifiche a incastro. La prima: <b>da Sydney a Newcastle si va in treno</b>, ogni 30 minuti da Central, 2h30, e l'auto si ritira lì. Fra le due città non c'è niente del vostro itinerario — sono 165 km di periferia, tangenziali e pedaggi elettronici — quindi non saltate paesaggio, saltate il traffico, e vi togliete l'uscita da Sydney con il volante a destra al primo giorno.</p>
+        <p>La seconda: il tratto ha <b>cinque notti anziché quattro</b>. Così nessuna tappa supera le tre ore di guida e ci sta un <b>giorno fermo a Byron Bay</b>, che è la cosa che mancava davvero. Anche Airlie Beach ne ha cinque, per avere margine sul meteo tropicale.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="voli">
+    <h2>I voli intercontinentali</h2>
+    <p class="lede">Andata e ritorno Roma ⇄ Melbourne con Etihad, Abu Dhabi ridotto a una coincidenza in entrambe le direzioni. <b>Biglietti acquistati:</b> questi orari non sono più un'ipotesi.</p>
+
+    <h3>Andata</h3>
+    <div class="segs">
+      <div class="seg"><span class="code">Andata</span><span class="route">Roma Fiumicino → Melbourne</span><span class="time">28 dic · 10:25 → 17:00 <b>(29)</b></span></div>
+      <div class="seg note">20h35 totali, uno scalo ad Abu Dhabi. Atterrate martedì 29 alle 17:00: cena in città e a letto presto, avete dieci ore di fuso addosso.</div>
+    </div>
+
+    <h3>Ritorno</h3>
+    <div class="segs">
+      <div class="seg"><span class="code">Ritorno</span><span class="route">Melbourne → Roma Fiumicino</span><span class="time">20 gen · 18:20 → 05:40 <b>(21)</b></span></div>
+      <div class="seg note">21h20 totali, sempre un solo scalo. Si dorme in aereo e si atterra a Fiumicino all'alba di giovedì 21, con tutta la giornata per rimettersi.</div>
+    </div>
+    <p>Nella stagione invernale che parte il <b>25 ottobre 2026</b> l'EY461 parte da Melbourne alle 18:20 <b>tutti i giorni</b>, quindi il mercoledì non è un giorno difficile e l'operativo è solido.</p>
+
+    <h3>Quattro cose da fare adesso che il biglietto c'è</h3>
+    <ul class="plain">
+      <li><b>Controllate che sia un biglietto solo.</b> Le due tratte devono stare sotto lo <span class="mono">stesso codice di prenotazione</span>. È il dettaglio da cui dipende tutto il resto: se ad Abu Dhabi perdete la coincidenza di 1h05, su biglietto unico è Etihad a doverla risolvere e a rimettervi sul volo dopo. Su due biglietti separati il problema è vostro.</li>
+      <li><b>Verificate cosa comprende la tariffa.</b> Etihad vende l'economy in più livelli e cambiano bagaglio in stiva, possibilità di modifica e scelta del posto. Sapere adesso quanti chili avete evita di scoprirlo al banco con le valigie fatte, e conta anche per i voli interni, dove i chili si pagano a parte.</li>
+      <li><b>Fate registrare i bagagli fino a destinazione finale</b> in entrambe le direzioni. Con un biglietto unico è automatico, ma chiedetelo comunque al check-in: allo scalo non dovete ritirare niente.</li>
+      <li><b>Promemoria a novembre.</b> Le compagnie ritoccano gli operativi due o tre mesi prima della partenza. Adesso però siete in una posizione migliore di prima: <b>su un biglietto già emesso, un cambio di orario significativo vi dà diritto a essere riprotetti o rimborsati</b> — non è un favore, è una condizione di trasporto, e sulla partenza da Roma vale anche il regolamento europeo. Quindi non subite un cambio: se l'orario si muove e la coincidenza si stringe, chiamate e fatevi spostare.</li>
+    </ul>
+    <p>Una cosa che potete fare da subito e che su tredici ore e cinquanta di volo si sente: <b>scegliete i posti</b>. Su Etihad la selezione anticipata in economy spesso si paga, ma diventa gratuita nelle ultime quarantott'ore. Se non volete spendere, mettetevi la sveglia al momento dell'apertura del check-in online.</p>
+  </section>
+
+  <section id="interni">
+    <h2>I tre voli interni</h2>
+    <p class="lede">Tutti diretti. Da comprare separatamente dal biglietto Etihad, ma <b>mai lo stesso giorno</b> di una tratta intercontinentale: se salta il volo interno non avete nessuna protezione sul lungo raggio.</p>
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr><th>Data</th><th>Tratta</th><th>Chi vola</th><th>Durata</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="when-col">2 gen</td><td>Melbourne → Sydney</td><td>Qantas, Virgin, Jetstar · uno ogni ora</td><td class="num">1h35</td></tr>
+          <tr><td class="when-col">11 gen</td><td>Brisbane → Proserpine <span class="mono">PPP</span></td><td>Virgin o Jetstar · partenza a metà giornata. Da Byron partite alle 07:30</td><td class="num">1h45</td></tr>
+          <tr><td class="when-col">17 gen</td><td>Proserpine <span class="mono">PPP</span> → Melbourne</td><td>Jetstar JQ833 · unica partenza del giorno, attorno alle 11</td><td class="num">2h35</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="rule">
+
+  <section id="mappa">
+    <h2>La mappa</h2>
+    <p class="lede">Tutto il viaggio su una figura sola. Roma resta fuori campo, in fondo a sinistra: il resto sta tra il diciannovesimo e il trentanovesimo parallelo sud, che sono circa duemila chilometri di costa.</p>
+
+    <div class="mapwrap">
+      <svg viewBox="-30 -30 630 960" role="img" aria-labelledby="mapTitle mapDesc" preserveAspectRatio="xMidYMid meet">
+        <title id="mapTitle">Mappa del viaggio lungo la costa orientale dell'Australia</title>
+        <desc id="mapDesc">Dalla Great Ocean Road a ovest di Melbourne, risalendo per Sydney, Nelson Bay, Port Macquarie, Sawtell e Byron Bay fino alle isole Whitsunday, all'altezza di Proserpine.</desc>
+
+        <path class="land" d="M 167.8 -30 L 167.8 0 L 173.1 62.7 L 195.3 85.9 L 243.2 114.4 L 274.8 157.3 L 327.1 232.9 L 344.2 259.9 L 380.8 299.1 L 402.6 315.4 L 405.6 356.8 L 408.3 394.4 L 417.0 418.0 L 423.7 442.3 L 422.0 451.1 L 414.7 472.7 L 407.0 505.4 L 399.9 548.3 L 386.5 576.8 L 374.1 597.4 L 361.7 605.3 L 344.9 641.1 L 332.1 662.0 L 326.4 688.6 L 308.3 711.0 L 298.6 762.7 L 300.9 779.0 L 234.2 793.4 L 181.8 840.9 L 144.3 813.2 L 132.9 790.8 L 111.4 810.5 L 99.6 818.5 L 89.6 826.5 L 84.2 830.7 L 70.5 823.1 L 49.7 812.4 L -30 811.3 L -30 -30 Z"/>
+
+        <path class="fly far" d="M 254.1 129.2 L 132.9 790.8"/>
+        <path class="fly" d="M 132.9 790.8 L 342.4 641.1"/>
+        <path class="fly" d="M 403.4 397.9 L 254.1 129.2"/>
+        <path class="fly far" d="M 132.9 790.8 L 155 902"/>
+
+        <path class="road" d="M 132.9 790.8 L 111.4 810.5 L 89.6 826.5 L 70.5 823.1"/>
+        <path class="road" d="M 361.7 605.3 L 374.1 597.4 L 399.9 548.3 L 407.0 505.4 L 423.7 442.3 L 417.0 418.0 L 403.4 397.9"/>
+        <path class="road" d="M 254.1 129.2 L 258.8 124.3"/>
+
+        <path class="rail" d="M 342.4 641.1 L 312.2 635.0"/>
+        <path class="rail" d="M 342.4 641.1 L 361.7 605.3"/>
+
+        <circle class="poi" cx="272" cy="121" r="4.5"/>
+        <circle class="poi" cx="254.1" cy="129.2" r="4.5"/>
+        <circle class="poi" cx="403.4" cy="397.9" r="4.5"/>
+        <circle class="poi" cx="312.2" cy="635.0" r="4.5"/>
+        <circle class="poi" cx="417.0" cy="418.0" r="4.5"/>
+        <circle class="poi" cx="142.3" cy="816.6" r="4.5"/>
+        <circle class="base" cx="70.5" cy="823.1" r="6"/>
+
+        <circle class="base" cx="258.8" cy="124.3" r="7.5"/>
+        <circle class="base" cx="399.9" cy="548.3" r="6"/>
+        <circle class="base" cx="423.7" cy="442.3" r="7.5"/>
+        <circle class="base" cx="407.0" cy="505.4" r="6"/>
+        <circle class="base" cx="374.1" cy="597.4" r="6"/>
+        <circle class="base" cx="342.4" cy="641.1" r="6"/>
+        <circle class="poi" cx="89.6" cy="826.5" r="4.5"/>
+        <circle class="base" cx="132.9" cy="790.8" r="6.5"/>
+
+        <text class="lbl" x="281" y="112">Whitehaven</text>
+        <text class="lbl sm" x="281" y="124">isole Whitsunday</text>
+        <text class="lbl" x="269" y="145">Airlie Beach</text>
+        <text class="lbl sm" x="269" y="157">11–17 gen · 6 notti</text>
+        <text class="lbl" x="245" y="133" text-anchor="end">Proserpine</text>
+        <text class="lbl sm" x="245" y="145" text-anchor="end">arrivo e partenza</text>
+
+        <text class="lbl" x="394" y="394" text-anchor="end">Brisbane</text>
+        <text class="lbl sm" x="394" y="406" text-anchor="end">solo aeroporto</text>
+        <text class="lbl" x="426" y="422">Burleigh Heads</text>
+        <text class="lbl" x="433" y="444">Byron Bay</text>
+        <text class="lbl sm" x="433" y="456">2 notti</text>
+        <text class="lbl" x="416" y="509">Sawtell / Coffs</text>
+        <text class="lbl" x="408" y="552">Port Macquarie</text>
+        <text class="lbl" x="383" y="601">Nelson Bay</text>
+        <text class="lbl sm" x="371" y="614" text-anchor="end">treno fino a Newcastle</text>
+        <text class="lbl" x="351" y="645">Sydney</text>
+        <text class="lbl sm" x="351" y="657">2–6 gen</text>
+        <text class="lbl" x="304" y="631" text-anchor="end">Blue Mountains</text>
+
+        <text class="lbl" x="143" y="786">Melbourne</text>
+        <text class="lbl sm" x="143" y="798">29 dic · 17 gen</text>
+        <text class="lbl" x="152" y="822">Phillip Island</text>
+        <text class="lbl" x="82" y="845" text-anchor="end">Apollo Bay</text>
+        <text class="lbl" x="63" y="812" text-anchor="end">Twelve Apostles</text>
+        <text class="lbl sm" x="63" y="800" text-anchor="end">18 gen</text>
+        <text class="lbl sm" x="161" y="908">⇄ Roma via Abu Dhabi</text>
+      </svg>
+
+      <div class="legend">
+        <span><i class="key fly"></i> volo</span>
+        <span><i class="key"></i> auto o pullman</span>
+        <span><i class="key rail"></i> treno</span>
+        <span><i class="key dot"></i> dove dormite</span>
+        <span><i class="key ring"></i> tappa di giornata</span>
+      </div>
+    </div>
+
+    <p>La linea sbiadita che taglia la mappa da cima a fondo è il volo del 17 gennaio, Proserpine → Melbourne: duemilaseicento chilometri sopra l'interno del continente, e in meno di tre ore siete tornati al punto di partenza. È la misura più onesta di quanto è grande il paese che state attraversando.</p>
+  </section>
+
+  <section id="itinerario">
+    <h2>L'itinerario</h2>
+    <p class="lede">Cinque blocchi, 22 notti, tutte in Australia. Melbourne appare due volte: all'inizio per il capodanno, alla fine per la Great Ocean Road e il congedo.</p>
+
+    <div class="leg">
+      <div class="when"><strong>29 dic–2 gen</strong>Melbourne<br>4 notti</div>
+      <div class="body">
+        <h3>Il capodanno, con il giorno dopo incluso</h3>
+        <p>Quattro notti all'Atlantis, dal 29 al 2. Il blocco fa <b>due cose</b>: arrivare e smaltire dieci ore di fuso prima del 31, e — la parte che si guadagna con la notte in più — <b>non ripartire il giorno dopo il veglione</b>. Il 1° gennaio è una giornata intera a disposizione, e si vola a Sydney il 2 con calma.</p>
+        <p>La Great Ocean Road è stata <b>spostata in fondo al viaggio</b>, al 17–19 gennaio, e la scheda qui sotto spiega perché. A Melbourne, in apertura, <b>non guidate mai</b>: niente noleggio, niente parcheggio, niente agenzie chiuse il 1° gennaio.</p>
+
+        <ul class="days">
+          <li><span class="d">Mar 29</span><span class="t">Atterraggio alle 17:00. Serata leggera in città: i laneways (Hosier Lane, Degraves), un cocktail sopra Flinders Lane. Niente di più, siete in viaggio da ventiquattro ore.</span></li>
+          <li><span class="d">Mer 30</span><span class="t">La prima giornata piena. Tre modi buoni di usarla, e con quattro notti non dovete più sceglierne uno solo — vedi sotto.</span></li>
+          <li><span class="d">Gio 31</span><span class="t">Giornata in città senza spostamenti, e la sera il <b>capodanno</b>. Vedi sotto.</span></li>
+          <li><span class="d">Ven 1</span><span class="t">La giornata che vi regala la notte in più, e va usata come vi sentite: <b>la seconda delle tre gite</b> se avete energie, oppure niente di programmato. Il 1° gennaio a Melbourne è lento per definizione — brunch lungo, St Kilda o i Botanic Gardens, un bagno — e dopo il veglione è probabilmente la cosa giusta. È festivo: spiagge, parchi e attrazioni aperti, molti negozi e ristoranti no.</span></li>
+          <li><span class="d">Sab 2</span><span class="t"><b>Volo per Sydney</b>, un'ora e mezza, uno ogni ora. Il bagaglio lasciatelo alla reception e usate l'ultima mattinata per il Queen Victoria Market. Allo SkyBus per l'aeroporto ci arrivate attraversando la strada.</span></li>
+        </ul>
+
+        <div class="opt pick" style="margin-top:1.3rem;background:var(--surface);border-color:var(--rule)">
+          <span class="tag">Le due giornate libere</span>
+          <h3>Il 30 dicembre e il 1° gennaio</h3>
+          <p>Con quattro notti avete <b>due giornate piene</b> da riempire, e queste sono le tre gite che valgono. Fatene due, una per giorno. La città — Queen Victoria Market, Royal Botanic Gardens, St Kilda — riempie senza sforzo quello che avanza, e il 1° gennaio va bene tenerla come giornata lenta: è festivo, molti negozi e ristoranti sono chiusi, ma spiagge, parchi e attrazioni no.</p>
+        </div>
+        <div class="opts">
+          <div class="opt pick">
+            <span class="tag">La più bella</span>
+            <h3>Yarra Valley</h3>
+            <p>Un'ora da Melbourne, ed è la regione vinicola che sta alla città come le Langhe stanno a Torino. Cantine storiche, pranzo lungo, e sulla strada l'<b>Healesville Sanctuary</b>, dove si vedono ornitorinchi, wombat e diavoli della Tasmania — cioè le bestie australiane che nel resto del viaggio non incontrate. Non avete l'auto a Melbourne, quindi prendete un <b>tour con partenza dal centro</b>: costa poco più del noleggio e potete bere tutti e due.</p>
+          </div>
+          <div class="opt">
+            <span class="tag">La più riposante</span>
+            <h3>Mornington Peninsula</h3>
+            <p>Le terme sulla collina, vasche calde all'aperto e vista sulla campagna. Con dieci ore di fuso addosso sono una cura, ed è la scelta giusta per il 1° gennaio se la sera prima avete fatto le ore piccole. Un'ora e un quarto da Melbourne, e c'è una navetta dal centro.</p>
+          </div>
+          <div class="opt">
+            <span class="tag">La più memorabile</span>
+            <h3>Phillip Island</h3>
+            <p>Al tramonto i pinguini più piccoli del mondo escono dall'acqua a centinaia e attraversano la spiaggia per tornare alle tane. Si prenota, si arriva per il tramonto e si rientra tardi. Col fuso europeo la sera siete comunque svegli, quindi nei primi giorni è la gita che vi costa meno fatica. Anche qui, meglio un tour dal centro che il volante.</p>
+          </div>
+        </div>
+
+        <div class="opt pick" style="margin-top:1.3rem">
+          <span class="tag">Il 31 dicembre</span>
+          <h3>Celebration Zones, e non c'è niente da prenotare</h3>
+          <p>Quattro aree libere gestite dal comune: <b>Docklands</b> (Victoria Harbour), <b>Flagstaff Gardens</b>, <b>Kings Domain</b> accanto ai Botanic Gardens e <b>Treasury Gardens</b>. Musica, DJ, silent disco e food truck dalle 18:00 all'una. Fuochi alle <b>21:30</b> e a <b>mezzanotte</b>; il secondo dura quattordici minuti e viene sparato dai tetti di tutto il centro, quindi si vede da molti punti e non da uno solo. Trasporti pubblici <b>gratis dalle 18:00 alle 6:00</b>.</p>
+          <p>Docklands è il più scenografico perché i fuochi si riflettono sull'acqua; Treasury Gardens è il più tranquillo e il più vicino agli hotel del centro. Per la cena prenotate comunque — il 31 i ristoranti si riempiono ovunque — ma senza i menu fissi da 200 € a testa di Sydney.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="when"><strong>2–6 gen</strong>Sydney<br>4 notti</div>
+      <div class="body">
+        <h3>Sydney, senza fretta e a prezzi umani</h3>
+        <p>Arrivando il 2 il capodanno è archiviato del tutto: niente sovrapprezzo, niente minimi di soggiorno, e le zone che a cavallo del 31 erano fuori budget tornano in gioco. Restano comunque vacanze scolastiche, quindi non è economica — ma è la differenza tra 200 e 400 € a notte. <b>Potts Point, Surry Hills, Darlinghurst</b> restano la scelta migliore per rapporto qualità-prezzo.</p>
+        <p>Con <b>quattro notti</b> Sydney smette di essere una corsa: il porto, le spiagge e le Blue Mountains ci stanno tutti senza doverne comprimere due nello stesso giorno, e resta una giornata da usare come viene.</p>
+
+        <div class="legmap">
+          <svg viewBox="-100 -20 560 525" role="img" aria-label="Sydney: il porto, i traghetti per Manly e Watsons Bay, la costiera da Bondi a Coogee, e il treno per le Blue Mountains">
+            <path class="water" d="M 318 185 L 285 205 L 245 218 L 200 232 L 162 250 L 120 242 L 67 228 L 15 238"/>
+            <path class="coast" d="M 330 78 L 332 169"/>
+            <path class="coast" d="M 304 200 L 309 260 L 302 338 L 280 377 L 268 419 L 263 468"/>
+
+            <path class="fly" d="M 161.9 252.2 L 319.4 96.2"/>
+            <path class="fly" d="M 161.9 252.2 L 304.3 213.2"/>
+            <path class="fly" d="M 161.9 252.2 L 66.9 226.2"/>
+            <path class="road" d="M 289.2 340.6 L 267.6 377 L 254.7 418.6"/>
+            <path class="rail" d="M 144.6 319.8 L 10 296"/>
+
+            <circle class="poi" cx="319.4" cy="96.2" r="4"/>
+            <circle class="poi" cx="304.3" cy="213.2" r="4"/>
+            <circle class="poi" cx="161.9" cy="252.2" r="4"/>
+            <circle class="poi" cx="177" cy="257.4" r="4"/>
+            <circle class="poi" cx="66.9" cy="226.2" r="4"/>
+            <circle class="poi" cx="185.6" cy="325" r="4"/>
+            <circle class="poi" cx="155.4" cy="325" r="4"/>
+            <circle class="poi" cx="144.6" cy="319.8" r="4"/>
+            <circle class="poi" cx="289.2" cy="340.6" r="4"/>
+            <circle class="poi" cx="267.6" cy="377" r="4"/>
+            <circle class="poi" cx="254.7" cy="418.6" r="4"/>
+            <circle class="poi" cx="79.9" cy="468" r="4"/>
+            <circle class="base" cx="179.2" cy="286" r="6.5"/>
+
+            <text class="lbl" x="330" y="94">Manly</text>
+            <text class="lbl sm" x="330" y="106">traghetto, 30 min</text>
+            <text class="lbl" x="314" y="211">Watsons Bay</text>
+            <text class="lbl" x="153" y="248" text-anchor="end">Circular Quay</text>
+            <text class="lbl sm" x="153" y="260" text-anchor="end">Opera House</text>
+            <text class="lbl" x="187" y="268">Mrs Macquaries</text>
+            <text class="lbl" x="58" y="222" text-anchor="end">Cockatoo Island</text>
+            <text class="lbl" x="190" y="290">Potts Point</text>
+            <text class="lbl sm" x="190" y="302">dove dormite</text>
+            <text class="lbl" x="196" y="328">Paddington</text>
+            <text class="lbl" x="146" y="330" text-anchor="end">Surry Hills</text>
+            <text class="lbl" x="136" y="304" text-anchor="end">Central</text>
+            <text class="lbl sm" x="136" y="316" text-anchor="end">treno per Newcastle, 6 gen</text>
+            <text class="lbl" x="299" y="337">Bondi</text>
+            <text class="lbl" x="291" y="380">Bronte</text>
+            <text class="lbl" x="281" y="422">Coogee</text>
+            <text class="lbl" x="90" y="471">Aeroporto</text>
+            <text class="lbl sm" x="90" y="483">arrivo da Melbourne, 2 gen</text>
+            <text class="lbl" x="4" y="290" text-anchor="end">← Blue Mountains</text>
+            <text class="lbl sm" x="4" y="302" text-anchor="end">2h in treno da Central</text>
+
+            <text class="dist" x="313" y="398">6 km a piedi</text>
+            <text class="sea" x="330" y="455">MAR DI TASMAN</text>
+          </svg>
+        </div>
+        <p class="lbl sm" style="font-family:var(--f-data);font-size:0.72rem;color:var(--muted);margin-top:0.2rem">Le linee tratteggiate azzurre qui sono traghetti, non voli.</p>
+        <ul class="days">
+          <li><span class="d">Sab 2</span><span class="t">Arrivo nel pomeriggio. Serata facile: Opera House, Royal Botanic Garden e aperitivo all'Opera Bar con il ponte davanti.</span></li>
+          <li><span class="d">Dom 3</span><span class="t">Al mattino i <b>Rocks Markets</b> sotto il ponte, che ci sono solo la domenica. Poi giornata sull'acqua: tour interno dell'Opera House e <b>ferry per Manly</b>, che è il modo più economico di fare una crociera nel porto.</span></li>
+          <li><span class="d">Lun 4</span><span class="t">Fuori città: le <b>Blue Mountains</b> in treno da Central, due ore e senza bisogno di auto. Katoomba, le Three Sisters, la passeggiata a Wentworth Falls.</span></li>
+          <li><span class="d">Mar 5</span><span class="t">Alba sulla costiera <b>Bondi–Coogee</b>, un'ora e mezza di sentiero sulle scogliere con le piscine di roccia lungo il percorso. Il pomeriggio è la giornata in più, e ci sono tre modi buoni di spenderla. <b>Watsons Bay</b> in traghetto, con The Gap e il pesce da Doyles. <b>Cockatoo Island</b>, ex bagno penale patrimonio UNESCO in mezzo alla baia. Oppure il <b>Royal National Park</b> a sud, un'ora di treno, con la Figure Eight Pool e le scogliere di Wedding Cake Rock. Se il meteo è brutto, il fallback è il Sydney Fish Market a Pyrmont.</span></li>
+          <li><span class="d">Mer 6</span><span class="t">Colazione senza fretta e <b>treno da Central per Newcastle</b>: partono ogni 30 minuti, sono 2h30 e si paga appoggiando la carta di credito. L'auto la ritirate a Newcastle, in Clyde Street a due passi dalla stazione — così vi risparmiate l'uscita da Sydney, i pedaggi elettronici e il primo giorno di guida a sinistra nel traffico del centro.</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="when"><strong>6–11 gen</strong>Costa nord<br>5 notti</div>
+      <div class="body">
+        <h3>La risalita, con calma</h3>
+        <p>Le prime due ore e mezza si fanno <b>in treno</b> fino a Newcastle, dove ritirate l'auto. Da lì restano circa 850 km spalmati su cinque notti, con la tappa più lunga a 2h50 e una giornata intera senza guidare a Byron Bay.</p>
+        <p>Una precisazione utile per le prenotazioni: si scrive <b>Gold Coast</b>, e sta a sud di Brisbane. La Sunshine Coast, che le somiglia di nome, sta a nord: non confondetele cercando hotel.</p>
+
+        <div class="legmap">
+          <svg viewBox="-150 -25 580 700" role="img" aria-label="Il treno da Sydney a Newcastle e la risalita in auto per Nelson Bay, Port Macquarie, Sawtell e Byron Bay fino a Brisbane">
+            <path class="coast" d="M 214.3 -25 L 214.3 16.2 L 234.4 72 L 249.9 129.6 L 246.1 150.3 L 229.1 201.6 L 211.3 279 L 195 380.7 L 164 448.2 L 135.4 496.8 L 106.7 515.7 L 68.1 600.3 L 46.4 660"/>
+
+            <path class="rail" d="M 62.7 600.3 L 106.7 515.7"/>
+            <path class="road" d="M 106.7 515.7 L 135.4 496.8 L 194.2 380.7 L 208.9 286.2 L 248.4 129.6 L 236 80.1 L 203.5 24.3"/>
+
+            <circle class="poi" cx="203.5" cy="24.3" r="4"/>
+            <circle class="poi" cx="222.1" cy="90" r="4"/>
+            <circle class="poi" cx="236" cy="80.1" r="4"/>
+            <circle class="poi" cx="229.1" cy="126" r="4"/>
+            <circle class="poi" cx="246.9" cy="143.1" r="4"/>
+            <circle class="poi" cx="229.1" cy="201.6" r="4"/>
+            <circle class="poi" cx="106.7" cy="515.7" r="4"/>
+            <circle class="base" cx="248.4" cy="129.6" r="7.5"/>
+            <circle class="base" cx="208.9" cy="286.2" r="6"/>
+            <circle class="base" cx="194.2" cy="380.7" r="6"/>
+            <circle class="base" cx="135.4" cy="496.8" r="6"/>
+            <circle class="base" cx="62.7" cy="600.3" r="6.5"/>
+
+            <text class="lbl" x="195" y="20" text-anchor="end">Brisbane</text>
+            <text class="lbl sm" x="195" y="32" text-anchor="end">aeroporto, 11 gen</text>
+            <text class="lbl" x="246" y="76">Burleigh Heads</text>
+            <text class="lbl sm" x="246" y="88">sosta, non notte</text>
+            <text class="lbl" x="213" y="103" text-anchor="end">Springbrook</text>
+            <text class="lbl" x="220" y="122" text-anchor="end">Minyon Falls</text>
+            <text class="lbl" x="260" y="126">Byron Bay</text>
+            <text class="lbl sm" x="260" y="138">2 notti · giorno fermo</text>
+            <text class="lbl" x="260" y="160">Lennox Head</text>
+            <text class="lbl sm" x="260" y="172">l'alternativa economica</text>
+            <text class="lbl" x="238" y="205">Yamba</text>
+            <text class="lbl" x="218" y="289">Sawtell</text>
+            <text class="lbl sm" x="218" y="301">notte del 9 · Coffs a 5 min</text>
+            <text class="lbl" x="204" y="383">Port Macquarie</text>
+            <text class="lbl sm" x="204" y="395">notte dell’8 · Koala Hospital</text>
+            <text class="lbl" x="145" y="499">Nelson Bay</text>
+            <text class="lbl sm" x="145" y="511">notte del 7 · dune</text>
+            <text class="lbl" x="98" y="512" text-anchor="end">Newcastle</text>
+            <text class="lbl sm" x="98" y="524" text-anchor="end">ritiro auto</text>
+            <text class="lbl" x="72" y="603">Sydney</text>
+            <text class="lbl sm" x="72" y="615">treno, 6 gen</text>
+
+            <text class="dist" x="215" y="50" text-anchor="end">200 km · 2h30</text>
+            <text class="dist" x="218" y="242" text-anchor="end">240 km · 2h50</text>
+            <text class="dist" x="196" y="330" text-anchor="end">160 km · 1h50</text>
+            <text class="dist" x="160" y="436" text-anchor="end">190 km · 2h15</text>
+            <text class="dist trn" x="76" y="550" text-anchor="end">treno · 2h30</text>
+            <text class="sea" x="288" y="350">MAR DI TASMAN</text>
+          </svg>
+        </div>
+        <ul class="days">
+          <li><span class="d">Mer 6</span><span class="t">Treno da Central, 2h30. Ritiro auto a Newcastle e <b>60 km fino a Nelson Bay</b>, meno di un'ora. Vi resta tutto il pomeriggio sulle <b>dune di Stockton</b> — sandboard, o il giro in 4×4 — e il tramonto a Zenith Beach.</span></li>
+          <li><span class="d">Gio 7</span><span class="t">190 km / 2h15 fino a <b>Port Macquarie</b>. Il <b>Koala Hospital</b> è un centro di recupero vero, non uno zoo, e vale la visita. Poi Tacking Point Lighthouse e il tramonto su Shelly Beach.</span></li>
+          <li><span class="d">Ven 8</span><span class="t">160 km / 1h50 fino a <b>Sawtell</b>, che è cinque minuti oltre Coffs Harbour ed è molto più bella. First Avenue con i suoi fichi di Moreton Bay è una delle strade più fotografate del New South Wales. Pomeriggio in spiaggia e niente altro in programma.</span></li>
+          <li><span class="d">Sab 9</span><span class="t">240 km / 2h50 fino a <b>Byron Bay</b>, la tappa più lunga del tratto. Sosta a metà strada a <b>Yamba e Angourie</b>, il paese di surf più sottovalutato della costa. Pomeriggio a Wategos Beach, tramonto dal faro.</span></li>
+          <li><span class="d">Dom 10</span><span class="t"><b>Nessuna valigia da rifare, nessun chilometro da guidare.</b> Alba al Cape Byron Lighthouse — è il punto più a est del continente e ci sono delfini sotto la scogliera quasi ogni mattina. Il parcheggio del faro è piccolo, a pagamento e <b>si riempie prima delle sette</b>: o salite a piedi da Wategos, venti minuti, o arrivate presto. Il resto della giornata come viene: l'entroterra fra <b>Bangalow</b> e le <b>Minyon Falls</b>, oppure semplicemente la spiaggia.</span></li>
+          <li><span class="d">Lun 11</span><span class="t">Partenza alle 07:30. Passando il confine di stato <b>l'orologio torna indietro di un'ora</b>. Colazione e bagno a <b>Burleigh Heads</b>, poi aeroporto di Brisbane, riconsegna auto e volo per Proserpine a metà giornata.</span></li>
+        </ul>
+        <p>Quello che si perde con questo schema è la <b>notte sulla Gold Coast</b>, e con lei le lucciole di Springbrook, che si vedono solo dopo il tramonto. Burleigh la attraversate di mattina, il che va benissimo per la spiaggia e per il promontorio. Brisbane città non la vedete affatto: è la parte meno interessante del tratto, quindi va bene così.</p>
+        <p><b>Noleggio.</b> Ritiro a Newcastle e riconsegna a Brisbane, cinque giorni a senso unico: mettete in conto una <span class="mono">one-way fee</span> tra 100 e 300 AUD quando non è inclusa in promozione. Siete in piena stagione scolastica australiana e le auto finiscono davvero, quindi prenotate adesso. Il treno invece no: si sale e basta, appoggiando la carta.</p>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="when"><strong>11–17 gen</strong>Queensland<br>6 notti</div>
+      <div class="body">
+        <h3>Whitsundays, e basta</h3>
+        <p>Sei notti, <b>una base sola</b>. Togliendo Magnetic Island cade anche l'unica ragione per arrivare fino a Townsville, quindi si entra e si esce dallo stesso aeroporto — Proserpine, quaranta minuti da Airlie Beach — e le quattro ore e mezza di pullman che c'erano prima diventano sei giorni interi dentro l'arcipelago.</p>
+        <p>È il cambio che rende il finale del viaggio più semplice invece che più povero: <b>nessun trasferimento, nessun bagaglio da rifare</b>, e la notte liberata si può spendere in mare invece che in un albergo.</p>
+
+        <div class="legmap">
+          <svg viewBox="-95 -35 625 665" role="img" aria-label="Le isole Whitsunday: Airlie Beach come base, Hamilton Island, Whitehaven Beach con Hill Inlet, Hook Island e Hardy Reef al largo">
+            <path class="coast" d="M -95 128 L -20 178 L 40 224 L 96 268 L 150 320 L 185 358 L 197 375 L 222 380 L 240 389 L 256 414 L 246 456 L 232 492 L 252 536 L 288 594 L 315 630"/>
+
+            <ellipse class="isl" cx="330" cy="272" rx="35" ry="21"/>
+            <ellipse class="isl" cx="374" cy="366" rx="42" ry="45"/>
+            <ellipse class="isl" cx="401" cy="306" rx="12" ry="9"/>
+            <ellipse class="isl" cx="345" cy="430" rx="18" ry="12"/>
+            <ellipse class="isl" cx="322" cy="427" rx="9" ry="6"/>
+            <ellipse class="isl" cx="281" cy="437" rx="8" ry="21"/>
+            <ellipse class="isl" cx="268" cy="377" rx="11" ry="8"/>
+            <ellipse class="isl" cx="253" cy="362" rx="6" ry="5"/>
+            <ellipse class="isl" cx="466" cy="36" rx="26" ry="15"/>
+
+            <path class="road" d="M 94 526 L 132 458 L 170 402 L 197 375"/>
+            <path class="fly" d="M 197 375 L 398 385"/>
+            <path class="fly" d="M 197 375 L 466 40"/>
+            <path class="fly" d="M 197 375 L 345 430"/>
+
+            <circle class="poi" cx="94" cy="526" r="4.5"/>
+            <circle class="poi" cx="398" cy="385" r="4.5"/>
+            <circle class="poi" cx="404" cy="338" r="4.5"/>
+            <circle class="poi" cx="466" cy="36" r="4.5"/>
+            <circle class="poi" cx="345" cy="430" r="4.5"/>
+            <circle class="base" cx="197" cy="375" r="7.5"/>
+
+            <text class="lbl" x="186" y="371" text-anchor="end">Airlie Beach</text>
+            <text class="lbl sm" x="186" y="383" text-anchor="end">base unica, 6 notti</text>
+            <text class="lbl" x="86" y="530" text-anchor="end">Proserpine PPP</text>
+            <text class="lbl sm" x="86" y="542" text-anchor="end">arrivo 11 · partenza 17</text>
+            <text class="lbl" x="414" y="389">Whitehaven Beach</text>
+            <text class="lbl" x="414" y="336">Hill Inlet</text>
+            <text class="lbl sm" x="414" y="348">il belvedere</text>
+            <text class="lbl sm" x="374" y="424" text-anchor="middle">Whitsunday Island</text>
+            <text class="lbl" x="330" y="243" text-anchor="middle">Hook Island</text>
+            <text class="lbl" x="345" y="456" text-anchor="middle">Hamilton Island</text>
+            <text class="lbl sm" x="296" y="443" text-anchor="end">Long Island</text>
+            <text class="lbl sm" x="240" y="352" text-anchor="end">Daydream · South Molle</text>
+            <text class="lbl" x="436" y="30" text-anchor="end">Hardy Reef</text>
+            <text class="lbl sm" x="436" y="42" text-anchor="end">pontone e Heart Reef</text>
+
+            <text class="dist air" x="300" y="374" text-anchor="middle">1h30 in catamarano</text>
+            <text class="dist air" x="392" y="150">70 km · 2h in barca</text>
+            <text class="dist air" x="392" y="164">o un'ora di volo</text>
+            <text class="dist air" x="264" y="400" text-anchor="end">traghetto 1h</text>
+            <text class="sea" x="130" y="96">MAR DEI CORALLI</text>
+          </svg>
+        </div>
+        <p class="lbl sm" style="font-family:var(--f-data);font-size:0.72rem;color:var(--muted);margin-top:0.2rem">Le linee tratteggiate sono escursioni in barca. Su Hardy Reef ci si arriva anche in aereo, ed è la stessa gita del volo su Heart Reef.</p>
+        <ul class="days">
+          <li><span class="d">Lun 11</span><span class="t">Brisbane → Proserpine, 1h45. Poi 40 minuti di navetta fino ad <b>Airlie Beach</b>. Pomeriggio alla Lagoon e niente altro.</span></li>
+          <li><span class="d">Mar 12</span><span class="t"><b>Whitehaven Beach</b> con il belvedere di <b>Hill Inlet</b>, che da solo giustifica il viaggio. Giornata piena in catamarano.</span></li>
+          <li><span class="d">Mer 13</span><span class="t">La <b>Barriera</b> al pontone di Reefworld su Hardy Reef: due ore di navigazione, poi snorkeling, semisommergibile e osservatorio sott'acqua.</span></li>
+          <li><span class="d">14–15 gen</span><span class="t">Il pezzo migliore, se lo volete: <b>veleggiata con pernottamento a bordo</b> fra le isole, due giorni e una notte. Si dorme all'ancora e la mattina ci si sveglia davanti a una spiaggia senza nessuno. È la notte che avete recuperato togliendo Magnetic Island, e usata così vale il cambio.</span></li>
+          <li><span class="d">Sab 16</span><span class="t">La giornata di riserva, ed è tutt'altro che sprecata. Se il meteo vi ha portato via qualcosa nei giorni prima, qui lo recuperate. Se invece è filato tutto, è il giorno del <b>volo panoramico su Heart Reef</b> — un'ora scarsa sopra la barriera e Whitehaven, 200–350 AUD a testa, e su un viaggio di nozze è la spesa che rimpiangereste di non aver fatto.</span></li>
+          <li><span class="d">Dom 17</span><span class="t">Ultimo bagno presto, navetta per Proserpine e volo per Melbourne: <b>Jetstar JQ833, unica partenza del giorno, attorno alle 11</b>. Si atterra alle 14, si ritira l'auto in aeroporto e si scende verso la costa: la Great Ocean Road comincia lo stesso pomeriggio.</span></li>
+        </ul>
+
+        <div class="flag" style="margin-top:1.4rem">
+          <span class="verdict">Stagione — da sapere prima di pagare</span>
+          <p>Gennaio nel Queensland tropicale è <b>stagione delle piogge e dei cicloni</b>: novembre–aprile, con il picco tra gennaio e marzo. Rovesci intensi, umidità intorno al 90%, e la possibilità concreta che un'escursione salti per meteo. Non è un motivo per non andare — l'acqua è a 29 gradi e c'è molta meno gente — ma serve <b>un'assicurazione seria</b> e prenotazioni cancellabili sulle escursioni.</p>
+          <p>È anche <b>stagione delle meduse</b> (box jellyfish e irukandji, da novembre a maggio): in mare si entra con la muta anti-medusa, che tutti gli operatori forniscono. E niente bagni in fiumi, estuari o mangrovie: i coccodrilli marini ci sono davvero, e i cartelli vanno presi alla lettera.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="leg">
+      <div class="when"><strong>17–20 gen</strong>Great Ocean Road<br>3 notti</div>
+      <div class="body">
+        <h3>Il congedo, e finalmente la costa</h3>
+        <p>Qui sta la modifica più grossa del piano. La Great Ocean Road era in apertura, il 1° e il 2 gennaio, ed era il posto sbagliato: capodanno sulla costa vittoriana vuol dire alloggi introvabili, strada intasata e piazzole piene. Spostandola in coda diventa <b>un'altra cosa</b> — metà gennaio è alta stagione ma non è capodanno, i letti si trovano, e soprattutto ci arrivate dopo <b>milleseicento chilometri di pratica con il volante a destra</b> invece che al terzo giorno con dieci ore di fuso addosso.</p>
+        <p>La costa ha <b>due notti</b>, quindi si fa con calma: si scende il pomeriggio dell'arrivo, si guida un giorno intero, e si torna il terzo. E c'è un incastro fortunato: <b>l'auto la ritirate all'aeroporto</b>, appena scesi da Proserpine — niente agenzie in città, niente orari festivi, niente SkyBus.</p>
+        <p>Il prezzo di questa versione è che <b>non resta una giornata libera a Melbourne</b> alla fine: le tre gite in Victoria si sono spostate all'inizio, sul 30 dicembre e sul 1° gennaio, dove adesso ci stanno. Qui la Great Ocean Road <i>è</i> la giornata regalo.</p>        <div class="legmap">
+          <svg viewBox="-45 -25 620 350" role="img" aria-label="La Great Ocean Road dall'aeroporto di Melbourne fino ai Twelve Apostles, con le notti a Lorne e Port Campbell, e il rientro dall'interno via Colac">
+            <path class="coast" d="M -45 214 L 24.7 218.3 L 38.8 222.8 L 44.1 227.3 L 70 236 L 116.5 272.3 L 144.7 247.5 L 178.2 229.5 L 197.6 200.3 L 252.3 162 L 259.3 153 L 280 142 L 300 146"/>
+            <path class="coast" d="M 300 146 L 285 120 L 266.4 112.5 L 280 80 L 340 45 L 372.2 36 L 375.8 49.5 L 388 90 L 386.3 128.3 L 370 155 L 330 158 Z"/>
+            <path class="coast" d="M 300 146 L 342 180 L 392 192 L 410 187"/>
+            <ellipse class="isl" cx="428" cy="181" rx="21" ry="8"/>
+
+            <path class="road" d="M 372.2 36 L 266.4 112.5 L 259.3 153 L 197.6 200.3 L 144.7 247.5 L 123.5 243 L 44.1 227.3 L 28 219"/>
+            <path class="road" d="M 28 219 L 128.8 155.3 L 266.4 112.5 L 372.2 36"/>
+
+            <circle class="poi" cx="266.4" cy="112.5" r="4"/>
+            <circle class="poi" cx="259.3" cy="153" r="4"/>
+            <circle class="poi" cx="197.6" cy="200.3" r="4"/>
+            <circle class="poi" cx="178.2" cy="229.5" r="4"/>
+            <circle class="poi" cx="123.5" cy="243" r="4"/>
+            <circle class="poi" cx="44.1" cy="227.3" r="4"/>
+            <circle class="base" cx="144.7" cy="247.5" r="6.5"/>
+            <circle class="poi" cx="116.5" cy="272.3" r="4"/>
+            <circle class="poi" cx="386.3" cy="128.3" r="4"/>
+            <circle class="poi" cx="428" cy="181" r="4"/>
+            <circle class="base" cx="28" cy="219" r="6.5"/>
+            <circle class="base" cx="372.2" cy="36" r="6.5"/>
+
+            <text class="lbl" x="382" y="32">Melbourne</text>
+            <text class="lbl sm" x="382" y="44">rientro il 19</text>
+            <text class="lbl" x="258" y="110" text-anchor="end">Geelong</text>
+            <text class="lbl" x="268" y="151">Torquay · Bells Beach</text>
+            <text class="lbl" x="206" y="199">Lorne</text>
+            <text class="lbl" x="187" y="228">Kennett River</text>
+            <text class="lbl sm" x="187" y="240">koala selvatici</text>
+            <text class="lbl" x="116" y="226" text-anchor="end">Maits Rest</text>
+            <text class="lbl" x="152" y="262" text-anchor="end">Apollo Bay</text>
+            <text class="lbl sm" x="152" y="274" text-anchor="end">notte del 17</text>
+            <text class="lbl" x="66" y="248" text-anchor="middle">Twelve Apostles</text>
+            <text class="lbl sm" x="66" y="260" text-anchor="middle">tramonto e alba</text>
+            <text class="lbl" x="18" y="206" text-anchor="middle">Port Campbell</text>
+            <text class="lbl sm" x="18" y="194" text-anchor="middle">notte del 18</text>
+            <text class="lbl" x="116" y="290" text-anchor="middle">Cape Otway</text>
+            <text class="lbl" x="395" y="126">Mornington</text>
+            <text class="lbl sm" x="395" y="138">Mornington</text>
+            <text class="lbl" x="452" y="178">Phillip Island</text>
+            <text class="lbl sm" x="452" y="190">pinguini</text>
+
+            <text class="dist" x="233" y="172">il 17 e il 18</text>
+            <text class="dist" x="176" y="134">rientro il 19 · 230 km · 3h30</text>
+            <text class="sea" x="150" y="315">STRETTO DI BASS</text>
+          </svg>
+        </div>
+        <ul class="days">
+          <li><span class="d">Dom 17</span><span class="t">Atterraggio a Melbourne alle 14. Ritiro auto <b>in aeroporto</b> e via verso sud-ovest: si prende il Ring Road e si scende a <b>Torquay</b> senza mai entrare in città, un'ora e un quarto. Primo pezzo di costa nel tardo pomeriggio — Bells Beach, Anglesea, Aireys Inlet — e notte a <b>Lorne</b> o ad <b>Apollo Bay</b>.</span></li>
+          <li><span class="d">Lun 18</span><span class="t">La giornata vera. I koala selvatici di <b>Kennett River</b>, che sono lì davvero e non in un parco, <b>Maits Rest</b> nella foresta pluviale, Lavers Hill, e giù verso Port Campbell. A gennaio in Victoria <b>il sole tramonta alle 21</b>: arrivate ai <b>Twelve Apostles per il tramonto</b>, che è l'unica ora in cui hanno davvero senso. Notte a Port Campbell o nell'entroterra dietro. Un dettaglio che conta: andando verso ovest l'oceano ve lo trovate <b>a sinistra</b>, cioè dal vostro lato di marcia, quindi le piazzole panoramiche si prendono accostando senza mai attraversare la corsia opposta.</span></li>
+          <li><span class="d">Mar 19</span><span class="t">Sveglia verso le sei e <b>di nuovo agli Apostoli</b>, questa volta da soli: i pullman da Melbourne arrivano verso le dieci. Poi <b>Loch Ard Gorge</b>, London Bridge e la Grotto, tutti nel raggio di dieci minuti. Si riparte verso le undici, rientro dall'interno via Colac — tre ore e mezza — e riconsegna dell'auto. Siete a Melbourne per il primo pomeriggio, e l'ultima sera è libera in città senza più niente da guidare.</span></li>
+          <li><span class="d">Mer 20</span><span class="t">Mattina e pranzo con calma: il Queen Victoria Market, un ultimo giro per i laneways, e il caffè migliore che berrete prima di ventun ore di aeroplani. In aeroporto entro le 15:30, volo alle 18:20.</span></li>
+        </ul>
+
+        <p>L'ultima notte, quella del 19, dormitela <b>in centro</b> e non vicino all'aeroporto: dal centro sono venti minuti, e con lo SkyBus da Southern Cross ancora meno. Se riuscite a tornare all'Atlantis, lì avete anche la valigia che ci avete lasciato a dicembre.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="rule">
+
+  <section id="immagini">
+    <h2>Com'è fatto ogni posto</h2>
+    <p class="lede">Le fotografie vere non posso incorporarle in questa pagina: le immagini esterne sono bloccate, e quelle di terzi hanno comunque un proprietario. Al loro posto, ogni luogo del viaggio è un collegamento diretto alle sue immagini — con accanto la cosa specifica da cercare, che spesso è diversa da quella che esce per prima.</p>
+
+    <div class="facts">
+      <div class="fact">
+        <h3>Melbourne e la Great Ocean Road</h3>
+        <p><a href="https://www.google.com/search?tbm=isch&amp;q=Melbourne+laneways+Hosier+Lane">Laneways di Melbourne</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Twelve+Apostles+Great+Ocean+Road+sunset">Twelve Apostles</a>, cercateli al tramonto, che è quando ha senso arrivarci · <a href="https://www.google.com/search?tbm=isch&amp;q=Loch+Ard+Gorge">Loch Ard Gorge</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Kennett+River+koala">Koala di Kennett River</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Maits+Rest+rainforest+Otway">Maits Rest</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Apollo+Bay+Victoria">Apollo Bay</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Phillip+Island+penguin+parade">Pinguini di Phillip Island</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Peninsula+Hot+Springs+hilltop+pool">Peninsula Hot Springs</a>, guardate la vasca in cima alla collina · <a href="https://www.google.com/search?tbm=isch&amp;q=Melbourne+New+Years+Eve+fireworks+Docklands">Capodanno a Docklands</a></p>
+      </div>
+
+      <div class="fact">
+        <h3>Sydney</h3>
+        <p><a href="https://www.google.com/search?tbm=isch&amp;q=Sydney+Opera+House+Bennelong+Point">Opera House</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Bondi+to+Coogee+coastal+walk">Costiera Bondi–Coogee</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Bondi+Icebergs+pool">Bondi Icebergs</a>, la piscina sulla scogliera · <a href="https://www.google.com/search?tbm=isch&amp;q=Manly+ferry+Sydney+Harbour">Traghetto per Manly</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Watsons+Bay+The+Gap+Sydney">Watsons Bay e The Gap</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Cockatoo+Island+Sydney">Cockatoo Island</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Three+Sisters+Katoomba+Blue+Mountains">Three Sisters, Blue Mountains</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=The+Rocks+Markets+Sydney">Rocks Markets</a></p>
+      </div>
+
+      <div class="fact">
+        <h3>La risalita fino a Brisbane</h3>
+        <p><a href="https://www.google.com/search?tbm=isch&amp;q=Stockton+sand+dunes+Port+Stephens">Dune di Stockton</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Tacking+Point+Lighthouse+Port+Macquarie">Tacking Point, Port Macquarie</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Sawtell+First+Avenue+fig+trees">Sawtell e i suoi fichi</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Angourie+Yamba+NSW">Yamba e Angourie</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Cape+Byron+Lighthouse+sunrise">Faro di Cape Byron</a>, cercatelo all'alba · <a href="https://www.google.com/search?tbm=isch&amp;q=Wategos+Beach+Byron+Bay">Wategos Beach</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Minyon+Falls+Nightcap+National+Park">Minyon Falls</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Bangalow+NSW+main+street">Bangalow</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Lennox+Head+Seven+Mile+Beach">Lennox Head</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Burleigh+Heads+headland+Gold+Coast">Burleigh Heads</a> · e per curiosità, <a href="https://www.google.com/search?tbm=isch&amp;q=Natural+Bridge+Springbrook+glow+worms">le lucciole del Natural Bridge</a>, che con questo itinerario non vedete: si accendono dopo il tramonto e voi la Gold Coast la attraversate di mattina.</p>
+      </div>
+
+      <div class="fact">
+        <h3>Le Whitsunday</h3>
+        <p><a href="https://www.google.com/search?tbm=isch&amp;q=Hill+Inlet+lookout+Whitehaven+Beach">Hill Inlet lookout</a> — è questa l'immagine che avete in mente, non <a href="https://www.google.com/search?tbm=isch&amp;q=Whitehaven+Beach+south+end">l'estremità sud di Whitehaven</a>, e il confronto tra le due ricerche spiega da solo perché insisto tanto · <a href="https://www.google.com/search?tbm=isch&amp;q=Heart+Reef+Whitsundays+aerial">Heart Reef</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Hamilton+Island+Whitsundays">Hamilton Island</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Airlie+Beach+lagoon">Airlie Beach</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Reefworld+pontoon+Great+Barrier+Reef">Pontone di Reefworld</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Whitsundays+overnight+sailing+maxi+yacht">Le barche che dormono all'ancora</a>, che è la notte in più che avete adesso</p>
+      </div>
+
+      <div class="fact">
+        <h3>L'ultima giornata in Victoria</h3>
+        <p><a href="https://www.google.com/search?tbm=isch&amp;q=Yarra+Valley+vineyards+Victoria">Yarra Valley</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Healesville+Sanctuary+platypus">Healesville Sanctuary</a>, dove si vedono ornitorinchi e wombat · <a href="https://www.google.com/search?tbm=isch&amp;q=Peninsula+Hot+Springs+hilltop+pool">Terme di Mornington</a> · <a href="https://www.google.com/search?tbm=isch&amp;q=Phillip+Island+penguin+parade+beach">Parata dei pinguini a Phillip Island</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ottimizzazioni">
+    <h2>Dettagli che cambiano la seconda metà</h2>
+    <p class="lede">Le prime due schede spiegano scelte che sono già dentro l'itinerario, e servono a farvele capire prima di prenotare. Le altre sono accorgimenti da tenere a mente quando comprate le escursioni o organizzate le giornate.</p>
+
+    <div class="opts">
+
+      <div class="opt pick">
+        <span class="tag">Il treno, e i suoi limiti</span>
+        <h3>Fino a Newcastle sì, oltre no</h3>
+        <p>Il treno che prendete il 6 gennaio è un <b>intercity suburbano</b>: parte da Central ogni 30 minuti, arriva a Newcastle in 2h30, si paga appoggiando la carta di credito e vi risparmia la peggior porzione di guida del viaggio. Su quella tratta è la scelta giusta senza discussioni.</p>
+        <p>Oltre Newcastle però smette di avere senso, ed è bene saperlo prima che venga l'idea. <b>L'alta velocità in Australia non esiste</b>: se ne parla dagli anni Ottanta, e il primo tratto approvato — proprio Sydney–Newcastle — ha come orizzonte il <b>2039</b>. Quello che c'è sulla costa nord è l'<b>XPT di NSW TrainLink</b>, diretto e senza cambi, ma <b>8h30 nel caso migliore</b> fino a Coffs Harbour: più lento dell'automobile, che ce ne mette sei.</p>
+        <div class="scroller" style="margin:1rem 0 0.5rem">
+          <table style="min-width:26rem">
+            <thead><tr><th>Da Sydney Central</th><th>Servizio</th><th>Durata</th></tr></thead>
+            <tbody>
+              <tr><td>Blue Mountains <span class="mono">4 gen</span></td><td>Intercity, frequente</td><td class="num">2h</td></tr>
+              <tr><td>Newcastle <span class="mono">6 gen</span></td><td>Intercity, ogni 30 min</td><td class="num">2h30</td></tr>
+              <tr><td>Coffs Harbour</td><td>XPT a lunga percorrenza</td><td class="num">8h30</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Lo schema è tutto lì: <b>i treni suburbani di Sydney sono ottimi, quelli a lunga percorrenza no</b>. Le prime due righe sono nel vostro itinerario, la terza è la ragione per cui da Newcastle in poi si guida.</p>
+      </div>
+
+      <div class="opt pick">
+        <span class="tag">Il risparmio più grosso del viaggio</span>
+        <h3>Nelle Whitsunday non vi serve l'auto</h3>
+        <p>Airlie Beach si gira a piedi e <b>tutti i tour vi passano a prendere in hotel</b>. Le uniche due strade che dovete fare sono l'aeroporto di Proserpine all'andata e al ritorno: quaranta minuti, e c'è una <b>navetta coordinata con i voli</b>, una ventina di dollari a testa. Da prenotare online prima di partire, perché a gennaio si riempie.</p>
+        <p>Con Magnetic Island fuori dal piano, questa scheda è diventata quasi banale — ed è il punto: <b>sei notti, un letto solo, zero riconsegne</b>. Tutto il resto succede in barca.</p>
+        <p>Risparmio rispetto a un noleggio per l'intera settimana in Queensland: <b>sui 400–500 €</b>, che è più o meno quanto costa la veleggiata con pernottamento qui sotto.</p>
+      </div>
+
+      <div class="opt">
+        <span class="tag">Assicurazione contro il meteo</span>
+        <h3>Le cose grosse vanno nei primi giorni, non negli ultimi</h3>
+        <p>Gennaio è il picco della stagione delle piogge, e qualche escursione salterà. La regola è semplice: <b>Whitehaven il 12 e il pontone sulla Barriera il 13</b>, cioè i due primi giorni pieni, perché sono le uscite che dipendono di più dal mare. Poi la veleggiata il 14 e il 15, e <b>il 16 lo tenete libero</b>: è il giorno in cui recuperate quello che è saltato, e se non è saltato niente diventa il volo su Heart Reef, che si prenota anche il giorno prima.</p>
+        <p>Corollario: scegliete operatori con cancellazione gratuita fino a 24 ore prima, e non pagate pacchetti che accorpano più escursioni in un unico prezzo non rimborsabile.</p>
+      </div>
+
+      <div class="opt">
+        <span class="tag">L'errore che fanno quasi tutti</span>
+        <h3>Whitehaven non è una spiaggia sola</h3>
+        <p>Molti tour economici fermano solo all'<b>estremità sud</b> della spiaggia: bella, ma non è quella delle fotografie. Il posto che avete in mente è <b>Hill Inlet</b>, all'estremità nord, con il belvedere sulla collina sopra — le lingue di sabbia bianca che si intrecciano con l'acqua turchese sono lì e solo lì.</p>
+        <p>Prima di pagare, controllate che l'itinerario dica esplicitamente <b>«Hill Inlet lookout»</b>. Se non lo dice, non ci va.</p>
+      </div>
+
+      <div class="opt">
+        <span class="tag">Dove va a finire la notte di Magnetic Island</span>
+        <h3>Spendetela in mare, non in una camera in più</h3>
+        <p>Una <b>veleggiata con pernottamento a bordo</b> tra le isole, due giorni e una notte, costa più o meno quanto una notte d'albergo più le escursioni che fareste comunque. Svegliarsi all'ancora davanti a Whitehaven, con nessun altro intorno, è la cosa che ricorderete tra vent'anni; la sesta notte in una camera ad Airlie Beach no. È l'uso migliore del giorno che avete appena liberato.</p>
+        <p>L'alternativa comoda, se il letto a bordo non vi convince, sono <b>due notti a Hamilton Island</b>, dentro l'arcipelago invece che di fronte. Un avvertimento però: da Hamilton Island <b>non si vola a Melbourne di lunedì</b> — ci sono solo Qantas il mercoledì, venerdì e domenica e Virgin il giovedì e il sabato — quindi il 18 dovete comunque rientrare in traghetto ad Airlie e ripartire da Proserpine. Con la prima corsa del mattino si fa, ma è una partenza nervosa: se scegliete Hamilton, dormite l'ultima notte ad Airlie.</p>
+      </div>
+
+      <div class="opt">
+        <span class="tag">Sydney, sette dettagli</span>
+        <h3>Cose che cambiano la giornata</h3>
+        <ul class="plain">
+          <li><b>Bondi–Coogee fatela all'alba</b>, non a metà mattina. A gennaio verso le dieci ci sono 35 gradi e sul sentiero non c'è un filo d'ombra.</li>
+          <li><b>Nuotate agli Icebergs</b> di Bondi, la piscina sulla scogliera. Costa pochi dollari ed è il posto più fotografato della città dal quale non state fotografando.</li>
+          <li>Tutto gennaio c'è il <b>Sydney Festival</b>, con molti eventi all'aperto gratuiti. Guardate il programma quando siete lì.</li>
+          <li><b>Non serve la carta Opal</b>: sui mezzi e sui traghetti si appoggia direttamente la carta di credito, e c'è un tetto di spesa settimanale automatico.</li>
+          <li>Il <b>ferry per Manly</b> è la crociera nel porto più economica che esista. Se ne avete tempo per un secondo, prendete quello per <b>Cockatoo Island</b>, ex bagno penale patrimonio UNESCO in mezzo alla baia.</li>
+          <li>All'Opera House, se c'è qualcosa in cartellone, <b>uno spettacolo vero batte il tour guidato</b>. A gennaio la stagione estiva è quasi sempre attiva.</li>
+          <li><b>A Sydney non noleggiate niente.</b> Le quattro giornate si fanno tutte a piedi, in traghetto e in treno, e prendendo l'auto solo a Newcastle vi togliete anche i pedaggi elettronici della città, che i noleggiatori riaddebitano con una commissione per ogni singolo passaggio.</li>
+        </ul>
+      </div>
+
+      <div class="opt">
+        <span class="tag">Piccole cose</span>
+        <h3>Tre dettagli che costano poco e rendono</h3>
+        <ul class="plain">
+          <li>Sul volo Brisbane → Proserpine, <b>Virgin include 23 kg in stiva, Jetstar no</b>. A parità di prezzo finale prendete Virgin.</li>
+          <li>La navetta <b>Proserpine ↔ Airlie Beach</b> si prenota online e costa una ventina di dollari a testa: fatelo prima, perché è coordinata con i voli e a gennaio si riempie.</li>
+          <li>Il 17 c'è <b>un solo volo</b> da Proserpine a Melbourne, e se salta il piano B è arrivare a Melbourne via Brisbane in giornata. Prenotate quella tratta per prima e tenetevi il numero del servizio clienti Jetstar salvato.</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="alloggi">
+    <h2>Dove dormire, e su quale piattaforma</h2>
+    <p class="lede">Obiettivo: 150 € a notte in due. È raggiungibile come <b>media</b>, non come tetto — alcune notti staranno sui 110 €, altre inevitabilmente sui 250. Il piano aiuta da solo: senza la notte di capodanno a Sydney sparisce la voce peggiore di tutte.</p>
+
+    <div class="opts">
+      <div class="opt">
+        <span class="tag">Per le tappe da 1–2 notti</span>
+        <h3>Booking</h3>
+        <p>Metà del viaggio è fatta di soste brevi: le due notti sulla Great Ocean Road, Nelson Bay, Port Macquarie, Sawtell e l'ultima notte a Melbourne. Su Airbnb, in alta stagione, quelle date hanno spesso <b>minimi di 3–7 notti</b> e non le prenotate proprio. E la cancellazione gratuita — con quattro mesi di anticipo e la stagione dei cicloni di mezzo — vale più di uno sconto.</p>
+        <p>Bonus non ovvio: l'Australia ha un'ottima rete di <b>motel</b> lungo la Pacific Highway. Niente fascino, ma puliti, parcheggio davanti alla porta, 100–150 €. Stanno su Booking, non su Airbnb, e sono la spina dorsale del vostro budget nella settimana in auto.</p>
+      </div>
+      <div class="opt">
+        <span class="tag">Per le tappe lunghe</span>
+        <h3>Airbnb</h3>
+        <p>Ha senso dove restate fermi: <b>Airlie Beach</b> con sei notti e <b>Byron Bay</b> con due. Lì scattano gli sconti settimanali e soprattutto avete cucina e lavatrice, che a metà di un viaggio di 25 giorni non è un lusso.</p>
+        <p>Confrontate sempre il <b>totale con le commissioni</b>, non il prezzo in vetrina: tra pulizie e servizio, un annuncio da 120 € arriva spesso a 165 €.</p>
+      </div>
+      <div class="opt pick">
+        <span class="tag">Quella che vi manca</span>
+        <h3>Stayz</h3>
+        <p>È il Vrbo australiano, e nelle località costiere è <b>più fornito di Airbnb</b>: le case vacanza di Port Stephens, Sawtell e Byron — quelle vere, gestite dalle agenzie locali — stanno lì. Se cercate solo su Airbnb, di quel mercato vedete un terzo. Sulle cinque notti della risalita, aprite tutte e tre le schede.</p>
+      </div>
+    </div>
+
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr><th>Base</th><th>Notti</th><th>Dove cercare</th><th>Target a notte</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Melbourne <span class="mono">29 dic – 2 gen</span></td><td class="num">4</td><td><b>Prenotato</b> · Atlantis Hotel, 300 Spencer St. 403 € in tutto, cancellabile fino al 27 dic</td><td class="num">101 €</td></tr>
+          <tr><td>Sydney <span class="mono">2–6 gen</span></td><td class="num">4</td><td>Booking · Potts Point alta, Surry Hills, Darlinghurst</td><td class="num">180 – 250 €</td></tr>
+          <tr><td>Nelson Bay <span class="mono">6 gen</span></td><td class="num">1</td><td>Stayz o Booking · marina di Nelson Bay, o Shoal Bay</td><td class="num">150 – 200 €</td></tr>
+          <tr><td>Port Macquarie <span class="mono">7 gen</span></td><td class="num">1</td><td>Booking · motel vicino a Town Beach</td><td class="num">110 – 170 €</td></tr>
+          <tr><td>Sawtell <span class="mono">8 gen</span></td><td class="num">1</td><td>Booking · a piedi da First Avenue; il ripiego è il Jetty di Coffs</td><td class="num">100 – 150 €</td></tr>
+          <tr><td>Byron Bay <span class="mono">9 e 10 gen</span></td><td class="num">2</td><td>Stayz · in centro con posto auto, o <b>Suffolk Park</b> e <b>Lennox Head</b>. Sabato e domenica: cercate adesso</td><td class="num">160 – 300 €</td></tr>
+          <tr><td>Airlie Beach <span class="mono">11–17 gen</span></td><td class="num">6</td><td>Airbnb · cucina e lavatrice, in piano e non sulla collina</td><td class="num">110 – 160 €</td></tr>
+          <tr><td>Great Ocean Road <span class="mono">17 e 18 gen</span></td><td class="num">2</td><td>Lorne o Apollo Bay la prima, Port Campbell o l'entroterra la seconda. Fuori capodanno si trova</td><td class="num">150 – 230 €</td></tr>
+          <tr><td>Melbourne, in chiusura <span class="mono">19 gen</span></td><td class="num">1</td><td>Booking · di nuovo all'Atlantis, in centro</td><td class="num">130 – 180 €</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>Media sulle 22 notti</td><td class="num">22</td><td>Con i valori intermedi e Melbourne al prezzo vero</td><td class="num">~160 € · ~146 € con i ripieghi</td></tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <h3>In quale quartiere, e dove mettete la macchina</h3>
+    <p>Nove basi in ventidue notti, e il criterio cambia del tutto a seconda che l'auto ce l'abbiate o no. Nelle <b>sette notti in cui guidate</b> conta il posto auto e la distanza dal ristorante; nelle <b>quindici in cui siete a piedi</b> conta soprattutto una cosa a cui non si pensa prenotando, ed è quanto è in salita la strada di casa.</p>
+
+    <div class="stays">
+
+      <article class="stay">
+        <div class="head">
+          <h3>Melbourne, in apertura</h3>
+          <span class="nights">4 notti · 29 dic – 2 gen · prenotate</span>
+          <span class="mode foot">a piedi</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Fatto</span><span class="t"><b>Atlantis Hotel, 300 Spencer Street</b> — quattro notti dal 29 al 2, <b>403 €</b> in tutto, cancellabile fino al 27 dicembre. Fanno 101 € a notte <i>con dentro il 31 dicembre</i>, cioè meno della metà di quello che avevo messo a budget: su questa tappa avete guadagnato fra i 160 e i 400 €.</span></li>
+          <li><span class="d">Dov'è</span><span class="t">All'angolo ovest della griglia, <b>di fronte a Southern Cross Station</b>. Non è il lato che avevo indicato io — avevo detto la metà est, quella dei laneways — ma per le vostre date specifiche ha tre vantaggi che il lato est non ha.</span></li>
+          <li><span class="d">Perché</span><span class="t">Primo: lo <b>SkyBus dall'aeroporto arriva a Southern Cross</b>, cioè dall'altra parte della strada. Il 29 atterrate alle 17:00 dopo ventiquattr'ore di viaggio, e l'ultimo pezzo con le valigie è attraversare un incrocio. Secondo: <b>Docklands è a un quarto d'ora a piedi</b>, ed è la Celebration Zone più bella del 31 perché i fuochi si riflettono sull'acqua — ci andate e tornate camminando, senza cercare un tram a mezzanotte. Terzo: il 2 ripartite in aereo per Sydney, e lo <b>SkyBus per l'aeroporto parte dalla stessa stazione</b> — quindi anche l'ultimo trasferimento è un incrocio da attraversare. Sia l'arrivo sia la partenza si risolvono attraversando la strada.</span></li>
+          <li><span class="d">Occhio</span><span class="t">Spencer Street è la parte meno bella della griglia — stazione, torri di uffici e vento — e sotto casa da mangiare c'è poco. <b>A cena si cammina</b>: verso Docklands, o verso est dove ci sono i laneways. Quindici-venti minuti a piedi, oppure cinque su un tram di Collins o Bourke Street, che dentro la <b>Free Tram Zone</b> è gratis e voi ci state dentro. Verificate anche se i 403 € comprendono la colazione: la prima mattina, con dieci ore di fuso addosso, averla nell'edificio vale parecchio.</span></li>
+          <li><span class="d">Manca</span><span class="t">Niente. Con la Great Ocean Road spostata in fondo al viaggio, le <b>quattro notti</b> che avete preso coprono esattamente il blocco di apertura: arrivate il 29, dormite 29, 30, 31 e 1°, e il 2 volate a Sydney. Nessuna seconda prenotazione, nessuna notte spezzata, e il 1° gennaio non dovete alzarvi per un aereo.</span></li>
+          <li><span class="d">Auto</span><span class="t">Nessuna, e nemmeno questo è poco. Con la Great Ocean Road spostata in coda, a Melbourne in apertura <b>non noleggiate niente</b>: sparisce il problema del 1° gennaio festivo con le agenzie chiuse, sparisce il parcheggio in centro e sparisce la guida a sinistra al terzo giorno di viaggio.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Sydney</h3>
+          <span class="nights">4 notti · 2–6 gennaio</span>
+          <span class="mode foot">a piedi</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Dormite</span><span class="t">A <b>Potts Point</b>, e nella parte alta: quella di Macleay Street e Challis Avenue. È il quartiere art déco con i platani e i caffè migliori della città, si scende a piedi ai Botanic Gardens e all'Opera House in mezz'ora, e soprattutto la stazione di Kings Cross vi mette a <b>cinque minuti da Central</b> e a tre da Martin Place. Conta più di quanto sembri: da Central partono sia il treno per le Blue Mountains del 5 sia quello per Newcastle del 7.</span></li>
+          <li><span class="d">Ripiego</span><span class="t"><b>Surry Hills</b> se pesate di più il mangiare — Crown Street e Bourke Street sono la cucina migliore della città, e Central è a dieci minuti a piedi. <b>Darlinghurst</b> sta in mezzo alle due. <b>The Rocks</b> è la cartolina, con i traghetti sotto casa e il prezzo più alto: ha senso solo se il porto è la ragione per cui siete lì.</span></li>
+          <li><span class="d">Auto</span><span class="t">Nessuna, ed è voluto: un posto auto in centro costa 60–80 AUD a notte e non lo usereste mai. Dall'aeroporto, il 3, il treno ha un <b>supplemento di stazione</b> di circa 17 AUD a testa — in due, con le valigie, un'auto a chiamata fino a Potts Point costa quasi uguale e ci mette venti minuti.</span></li>
+          <li><span class="d">Occhio</span><span class="t">La parte bassa di <b>Darlinghurst Road</b>, il vecchio Kings Cross, è rumorosa il venerdì e il sabato: voi ci siete entrambi. E <b>non dormite a Bondi o a Manly</b> — sono bellissime e vanno viste, ma vi mettono quaranta-sessanta minuti di trasferimento dentro ogni giornata.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Nelson Bay</h3>
+          <span class="nights">1 notte · 6 gennaio</span>
+          <span class="mode car">in auto</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Dormite</span><span class="t">Attorno alla <b>marina di Nelson Bay</b>, così a cena si va a piedi guardando le barche, oppure a <b>Shoal Bay</b>, due chilometri a est: è la baia riparata, l'acqua è piatta e c'è il pub sul lungomare. Arrivando nel primo pomeriggio — treno fino a Newcastle, ritiro auto, un'ora di strada — le dune di Stockton ci stanno prima di cena.</span></li>
+          <li><span class="d">Auto</span><span class="t">Gratis ovunque, e quasi tutte le strutture hanno il posto incluso.</span></li>
+          <li><span class="d">Occhio</span><span class="t"><b>Anna Bay</b> è attaccata alle dune ma il paese non ha niente. Per una notte sola conviene dormire dove si mangia.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Port Macquarie</h3>
+          <span class="nights">1 notte · 7 gennaio</span>
+          <span class="mode car">in auto</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Dormite</span><span class="t">Vicino a <b>Town Beach</b>, nella parte di centro tra Horton Street e la foce del fiume. Al tramonto si fa a piedi il <b>breakwall</b>, il molo dove da trent'anni chi passa dipinge un masso: è gratis, dura mezz'ora ed è una delle cose più belle e più strane di tutta la costa.</span></li>
+          <li><span class="d">Ripiego</span><span class="t">La fila di motel su <b>Hastings River Drive</b> costa meno, ha il parcheggio davanti alla porta ed è perfettamente funzionale — ma a cena ci andate in macchina.</span></li>
+          <li><span class="d">Occhio</span><span class="t">Il <b>Koala Hospital</b> apre la mattina ed è a dieci minuti dal centro: vale la sveglia prima di rimettersi in strada, ma controllate gli orari, che cambiano spesso.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Sawtell</h3>
+          <span class="nights">1 notte · 8 gennaio</span>
+          <span class="mode car">in auto</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Dormite</span><span class="t">A due passi da <b>First Avenue</b>, che è tutta Sawtell: una strada sola sotto i fichi giganti, con i ristoranti, il cinema anni Cinquanta e la spiaggia in fondo. Se trovate un letto lì dentro prendetelo senza pensarci — è l'unica ragione per fermarsi qui invece che a Coffs.</span></li>
+          <li><span class="d">Ripiego</span><span class="t">Sawtell ha pochissimi posti e a gennaio si riempiono. Il ripiego è <b>Coffs Harbour</b>, ma scegliete la zona del <b>Jetty</b>, attorno a Harbour Drive e alla marina: i motel allineati sulla Pacific Highway sono comodi e tristi. In alternativa Diggers Beach, a nord.</span></li>
+          <li><span class="d">Auto</span><span class="t">Libero, anche su First Avenue.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Byron Bay</h3>
+          <span class="nights">2 notti · 9 e 10 gennaio</span>
+          <span class="mode car">in auto</span>
+        </div>
+        <p>È la scelta più cara del viaggio, e va fatta in un modo o nell'altro — non a metà.</p>
+        <ul class="days">
+          <li><span class="d">Dentro</span><span class="t">Il triangolo tra <b>Jonson, Lawson e Massinger Street</b>: si va a piedi a cena, in spiaggia e all'attacco del sentiero del faro, e l'auto non la toccate più. Si paga — a gennaio 250–400 € a notte — e va <b>verificato che l'annuncio abbia un posto auto riservato</b>, perché in centro il parcheggio è a pagamento, controllato sul serio, e alle nove del mattino è pieno.</span></li>
+          <li><span class="d">Fuori</span><span class="t"><b>Suffolk Park</b> a otto minuti a sud, sulla spiaggia e a metà prezzo. <b>Bangalow</b> a un quarto d'ora nell'entroterra: paese di collina, caffè, silenzio. <b>Lennox Head</b> a venti minuti, con Seven Mile Beach e un paese vero, il miglior rapporto qualità-prezzo della zona. <b>Ballina</b> a mezz'ora, il più economico e il meno interessante.</span></li>
+          <li><span class="d">Occhio</span><span class="t">Con la giornata ferma del 10 l'opzione «fuori» regge bene, ma mettete in conto il <b>traffico di Byron a gennaio</b>: tra le dieci e le sedici si entra in coda e si gira a vuoto per parcheggiare. Andateci all'alba — che per il faro è comunque il momento giusto — e di nuovo verso l'aperitivo.</span></li>
+          <li><span class="d">In più</span><span class="t"><b>Wategos</b> è la baia sotto il faro, la più bella di tutte, ma è una salita ripida dal paese: splendida con l'auto, scomoda senza.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Airlie Beach</h3>
+          <span class="nights">6 notti · 11–17 gennaio</span>
+          <span class="mode foot">a piedi</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Dormite</span><span class="t"><b>In piano</b>, ed è il consiglio più utile di tutta questa sezione. Airlie è costruita su una collina, e metà degli appartamenti economici con la vista più bella stanno su strade ripidissime tipo Golden Orchid Drive o Mount Whitsunday Drive: venti minuti di salita con 32 gradi e il 90% di umidità, che dopo una giornata in mare non fate. Senza auto cercate solo tra <b>l'Esplanade, la Shute Harbour Road e le strade subito dietro</b>, nel tratto tra il Lagoon e Port of Airlie.</span></li>
+          <li><span class="d">Perché</span><span class="t">Le barche partono da <b>Port of Airlie</b>, cinque minuti a sud del centro, e dalla <b>Coral Sea Marina</b>, dieci a nord. I tour vi passano a prendere, ma il pulmino nelle stradine in salita non ci sale: vi danno appuntamento giù sulla strada principale, alle sei e mezza del mattino.</span></li>
+          <li><span class="d">Cercate</span><span class="t">Con sei notti, un <b>appartamento con cucina e lavatrice</b>: è il punto del viaggio in cui serve fare il bucato. E ad Airlie non si fa il bagno in mare — si nuota nella <b>Lagoon</b>, la piscina pubblica gratuita sul lungomare. Stare a cinque minuti da lì, o avere una piscina, vale più di una vista.</span></li>
+          <li><span class="d">Occhio</span><span class="t">La <b>Shute Harbour Road</b> è la strada dei bar dei backpacker e suona fino alle due: chiedete una camera che non affacci sulla strada, o state una via dietro. E se fate la veleggiata con pernottamento, quelle notti a terra non vi servono: prenotate <b>cinque notti e non sei</b>, ma decidetelo prima di bloccare l'appartamento.</span></li>
+          <li><span class="d">Ripiego</span><span class="t"><b>Cannonvale</b>, tre chilometri a ovest, costa meno e ha il supermercato grande. Il lungomare pedonale la collega ad Airlie in quaranta minuti a piedi, tutti in piano: senza auto ci si può stare, ma quel tratto lo fate ogni giorno.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Great Ocean Road</h3>
+          <span class="nights">2 notti · 17 e 18 gennaio</span>
+          <span class="mode car">in auto</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Perché</span><span class="t">Queste due notti erano il 1° e il 2 gennaio, e su quelle date erano <b>impossibili</b>: prezzi fuori scala e niente libero. Non era sfortuna — il problema non è la data, sono i <b>paesi di mare</b>. Torquay, Lorne e Apollo Bay sono dove va in ferie mezza Melbourne, e su quel tratto di costa ci sono poche centinaia di letti. A metà gennaio è ancora alta stagione, ma il picco è passato: si trova, e a prezzi normali.</span></li>
+          <li><span class="d">La prima</span><span class="t">Il 17, dopo aver ritirato l'auto in aeroporto e sceso un'ora e un quarto: <b>Lorne</b> o <b>Apollo Bay</b>. Lorne è più mondana e ha più ristoranti, Apollo Bay è più tranquilla e vi lascia meno strada il giorno dopo. In entrambe dormite <b>in paese</b>, così a cena si va a piedi: dopo un volo e due ore di guida non volete rimettervi al volante per un ristorante.</span></li>
+          <li><span class="d">La seconda</span><span class="t">Il 18, all'altezza dei Twelve Apostles, ed è quella che conta: dormendo lì li vedete <b>al tramonto e all'alba</b>, prima che alle dieci arrivino i pullman da Melbourne. <b>Port Campbell</b> è a dodici minuti ed è la scelta ovvia. Se è pieno o caro: <b>Timboon</b> venti minuti nell'entroterra, <b>Camperdown</b> tre quarti d'ora a nord con motel normali e già sulla strada di casa, <b>Warrnambool</b> tre quarti d'ora a ovest — trentacinquemila abitanti e decine di motel, è il posto dove una camera <i>si trova</i>.</span></li>
+          <li><span class="d">Trucco</span><span class="t">Guardate gli <b>holiday park</b> — Big4, NRMA, Discovery e gli indipendenti. I loro <b>cabin</b> sono monolocali veri con bagno e angolo cottura, costano 120–180 € e restano liberi quando i motel sono pieni, perché quasi nessuno straniero li cerca. Ce ne sono a Lorne, Apollo Bay, Port Campbell e Warrnambool. Secondo canale: i <b>pub di paese</b> con le camere al piano di sopra, che spesso non stanno su Booking e si prenotano per telefono.</span></li>
+          <li><span class="d">Auto</span><span class="t">Parcheggio gratis ovunque e i motel ce l'hanno davanti alla porta. L'auto la prendete <b>all'aeroporto di Melbourne</b> il 17 appena atterrati e la riconsegnate il 19 in città: niente agenzie con orari festivi, niente SkyBus, niente parcheggio in centro. Arrivate però <b>prima del buio</b> tutte e due le sere: sulla Great Ocean Road al crepuscolo ci sono canguri e koala sulla carreggiata.</span></li>
+          <li><span class="d">Occhio</span><span class="t">Non prendete niente <b>su per gli Otways</b> — Lavers Hill, Beech Forest, le strade interne: tornanti stretti e buio totale. Se dovete stare nell'entroterra, sceglietelo <b>a nord degli Apostoli</b>, sulla pianura, non dentro la foresta.</span></li>
+        </ul>
+      </article>
+
+      <article class="stay">
+        <div class="head">
+          <h3>Melbourne, in chiusura</h3>
+          <span class="nights">1 notte · 19 gennaio</span>
+          <span class="mode foot">a piedi</span>
+        </div>
+        <ul class="days">
+          <li><span class="d">Dormite</span><span class="t">Una notte sola, il 19, e conviene farla di nuovo all'<b>Atlantis</b>. Intanto perché quasi tutti gli hotel tengono una valigia per un cliente che rientra. Tra il 2 e il 17 gennaio fate <b>tre voli interni</b> con il bagaglio a pagamento, e vi portate dietro i vestiti di Melbourne — che a gennaio la mattina fa quindici gradi mentre ad Airlie ne fa trentadue — più quello che comprate per strada. Chiedetelo per iscritto quando prenotate; se dicono di no, alla stazione di <b>Southern Cross</b> c'è il deposito bagagli.</span></li>
+          <li><span class="d">Perché</span><span class="t">Di nuovo in centro, e stavolta c'è una ragione in più: il 19 arrivate dalla Great Ocean Road nel primo pomeriggio, riconsegnate l'auto e avete una sera sola in città: stare in centro è l'unico modo di sfruttarla.</span></li>
+          <li><span class="d">Auto</span><span class="t">Nessuna: l'auto della Great Ocean Road la riconsegnate il 19 nel pomeriggio, appena rientrati, e l'ultima notte siete a piedi.</span></li>
+          <li><span class="d">Occhio</span><span class="t">Non dormite vicino all'aeroporto per il volo delle 18:20 — è il modo peggiore di chiudere il viaggio. E qui l'Atlantis ha un secondo vantaggio che a dicembre non serviva: lo <b>SkyBus parte da Southern Cross</b>, che è dall'altra parte della strada, ogni dieci minuti e in mezz'ora è all'aeroporto. Uscite alle 14:30 e siete lì alle 15:30, con l'ultima mattinata passata in città e le valigie lasciate alla reception fino all'ultimo momento.</span></li>
+        </ul>
+      </article>
+
+    </div>
+
+    <h3>Le tre leve che vi riportano a 150</h3>
+    <ul class="plain">
+      <li><b>Non dormite nei paesi di moda.</b> Lennox Head o Ballina al posto di Byron, Coffs al posto di Sawtell. Sono dieci-venti minuti di auto e spesso metà prezzo — e su <b>due</b> notti a Byron la differenza raddoppia.</li>
+      <li><b>Prenotate al contrario.</b> Partite dalle due notti a Byron dell'8 e del 9 gennaio, che sono l'unico vero collo di bottiglia, e riempite il resto dopo. Melbourne, Sydney e Airlie Beach ci saranno ancora a novembre; una casa a Byron per quelle date no.</li>
+      <li><b>Sempre e solo tariffe cancellabili.</b> Bloccate tutto adesso al prezzo che c'è, poi ricontrollate a ottobre: capita che qualcosa scenda, e in quel caso ricancellate e riprenotate. Al contrario non funziona mai.</li>
+    </ul>
+  </section>
+
+  <section id="prenotazioni">
+    <h2>Cosa prenotare, e quando</h2>
+    <p class="lede">In ordine di urgenza reale, aggiornato adesso che i voli sono emessi. Le due righe in cima sono le uniche che non possono aspettare: sono date rigide su mercati piccoli, e non c'è più modo di spostare il viaggio di un giorno per aggirarle.</p>
+
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr><th>Quando</th><th>Cosa</th><th>Perché</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="when-col">Subito</td><td><b>Le due notti a Byron Bay</b>, 9 e 10 gennaio</td><td>Il collo di bottiglia numero uno: sabato e domenica in piena stagione scolastica, nel paese più richiesto della costa. Cercate in parallelo Byron, Suffolk Park e Lennox Head.</td></tr>
+          <tr><td class="when-col">Subito</td><td>Le due notti sulla <b>Great Ocean Road</b>, 17 e 18 gennaio</td><td>Fuori capodanno si trova, ma è ancora alta stagione e i paesi sono piccoli. Lorne o Apollo Bay la prima, Port Campbell o l'entroterra la seconda.</td></tr>
+          <tr><td class="when-col">Subito</td><td>Noleggio auto Newcastle → Brisbane</td><td>Cinque giorni a senso unico. Picco delle vacanze australiane: le flotte si svuotano davvero e le tariffe peggiorano avvicinandosi.</td></tr>
+          <tr><td class="when-col">Set–ott</td><td>Noleggio auto Melbourne, 17–19 gennaio</td><td>Tre giorni per la Great Ocean Road. Ritiro <b>all'aeroporto</b> il 17 appena atterrati da Proserpine e riconsegna in città il 19: così non dipendete da nessun orario di agenzia.</td></tr>
+          <tr><td class="when-col">Mai</td><td>Il treno per Newcastle</td><td>Non si prenota: si sale e si appoggia la carta. Parte ogni 30 minuti.</td></tr>
+          <tr><td class="when-col">Subito</td><td>Hotel ad Airlie Beach, sei notti</td><td>Poche strutture e tutte piene nella seconda decade di gennaio. Con sei notti consecutive la scelta si stringe ancora.</td></tr>
+          <tr><td class="when-col">Set–ott</td><td>Hotel a Melbourne, notte del 19</td><td>L'ultima. Di nuovo all'Atlantis se c'è posto: lasciate lì una valigia per tutto il viaggio e il 20 lo SkyBus per l'aeroporto parte dall'altra parte della strada.</td></tr>
+          <tr><td class="when-col">Set–ott</td><td>I tre voli interni</td><td>Jetstar e Virgin aprono le tariffe basse in questa finestra. Comprate il bagaglio in stiva insieme al biglietto. Il <b>Proserpine → Melbourne del 18</b> è l'unico della giornata: quello prenotatelo per primo.</td></tr>
+          <tr><td class="when-col">Set–ott</td><td>Hotel a Sydney, 2–6 gennaio</td><td>Nessuna corsa: il capodanno è archiviato, niente sovrapprezzo e niente minimi di soggiorno. È esattamente la ragione per cui il veglione si fa a Melbourne.</td></tr>
+          <tr><td class="when-col">Set–ott</td><td>Cena del 31 a Melbourne</td><td>La città si riempie come ovunque, ma senza i menu fissi da capogiro.</td></tr>
+          <tr><td class="when-col">Novembre</td><td>ETA — il visto elettronico australiano</td><td>App «Australian ETA», circa 20 AUD, si ottiene in giorni. Non prima: vale 12 mesi dall'emissione.</td></tr>
+          <tr><td class="when-col">Novembre</td><td>Assicurazione viaggio</td><td>Va scelta con copertura esplicita per eventi meteo e cancellazione escursioni.</td></tr>
+          <tr><td class="when-col">Set–ott</td><td><b>La veleggiata con pernottamento</b>, 14–15 gennaio</td><td>Le barche buone hanno poche cuccette e in alta stagione si esauriscono mesi prima. È la notte che avete guadagnato: se la volete, va presa presto.</td></tr>
+          <tr><td class="when-col">Novembre</td><td>Escursioni Whitsundays</td><td>Whitehaven con Hill Inlet, pontone sulla Barriera, volo su Heart Reef. Scegliete tariffe cancellabili.</td></tr>
+          <tr><td class="when-col">Novembre</td><td><b>Ricontrollate gli orari Etihad</b></td><td>Le compagnie ritoccano gli operativi due o tre mesi prima. Su un biglietto già emesso un cambio significativo vi dà diritto a essere riprotetti o rimborsati: se la coincidenza di 1h05 si stringe, chiamate invece di subirla.</td></tr>
+          <tr><td class="when-col done">Fatto</td><td><b>Atlantis Hotel Melbourne</b>, 29 dic – 2 gen</td><td>403 € per quattro notti, capodanno compreso, cancellabile fino al 27 dicembre. Ricontrollate il prezzo a ottobre: se è sceso, ricancellate e riprenotate.</td></tr>
+          <tr><td class="when-col done">Fatto</td><td><b>Etihad, Roma ⇄ Melbourne</b></td><td>Acquistato. Le date del viaggio sono fisse: 28 dicembre all'andata, 20 gennaio al ritorno.</td></tr>
+          <tr><td class="when-col">Mai</td><td>Il capodanno</td><td>Le Celebration Zone di Melbourne sono gratuite e senza prenotazione. È il pezzo di viaggio che non dovete organizzare.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="pratico">
+    <h2>Pratica</h2>
+    <div class="facts">
+      <div class="fact">
+        <h3>Passaporto, e nell'ordine giusto</h3>
+        <p>L'<b>ETA si lega al numero di passaporto</b>: se dovete rinnovarlo, fatelo <b>prima</b> di richiederla, altrimenti la rifate da capo. L'Australia chiede solo che sia valido per tutta la permanenza, non i sei mesi che si dà per scontato.</p>
+      </div>
+      <div class="fact">
+        <h3>Visti</h3>
+        <p>Australia: ETA subclass 601, si richiede dall'app ufficiale con il passaporto elettronico, circa 20 AUD. Negli Emirati non mettete piede se non per cambiare aereo, ma in caso servisse l'ingresso è senza visto per 90 giorni.</p>
+      </div>
+      <div class="fact">
+        <h3>Patente</h3>
+        <p>Patente italiana <b>più traduzione ufficiale in inglese o Permesso Internazionale di Guida</b>. Si richiede all'ACI e ci vogliono un paio di settimane: non lasciatelo a dicembre.</p>
+      </div>
+      <div class="fact">
+        <h3>Il fuso che frega tutti</h3>
+        <p>A gennaio Melbourne e Sydney sono su ora legale, <b>il Queensland no</b>. Passando il confine sulla Gold Coast l'orologio torna indietro di un'ora. Ricontrollate ogni orario di volo dopo quel punto.</p>
+      </div>
+      <div class="fact">
+        <h3>Guida</h3>
+        <p>A sinistra. Autovelox ovunque e tolleranza zero sui limiti. Alcol allo 0,05. Sui tratti lunghi evitate di guidare all'alba e al tramonto: è quando i canguri attraversano.</p>
+      </div>
+      <div class="fact">
+        <h3>Sole</h3>
+        <p>Indice UV tra 12 e 14 in piena estate. Ci si scotta in dieci minuti anche con le nuvole. Protezione 50+, cappello, maglietta in acqua.</p>
+      </div>
+      <div class="fact">
+        <h3>Bagagli sui voli interni</h3>
+        <p>Jetstar fa pagare la stiva a parte: comprate il bagaglio insieme al biglietto, in aeroporto costa il triplo.</p>
+      </div>
+      <div class="fact">
+        <h3>Connettività</h3>
+        <p>eSIM Telstra: costa più di Optus ma è l'unica con copertura affidabile sulla Pacific Highway e sulle isole Whitsunday. In mare, oltre le prime miglia, non prende nessuno.</p>
+      </div>
+      <div class="fact">
+        <h3>Spiccioli</h3>
+        <p>Presa tipo I, 230 V: serve l'adattatore. Contanti quasi inutili, si paga con carta ovunque — con un supplemento dell'1–2%, che lì è normale. La mancia non si usa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="budget">
+    <h2>Ordine di grandezza</h2>
+    <p class="lede">Stima per due persone, 25 giorni, alta stagione australiana, con gli alloggi tenuti sui 150 € di media. Il risparmio grosso è già dentro l'itinerario: il capodanno a Melbourne invece che a Sydney vale <b>circa 900 €</b>, e Abu Dhabi ridotto a una coincidenza toglie due notti d'albergo senza aggiungere niente.</p>
+    <div class="scroller">
+      <table>
+        <thead>
+          <tr><th>Voce</th><th>Nota</th><th>Stima (2 pax)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Etihad Roma ⇄ Melbourne</td><td>Prezzo del biglietto individuato, tasse incluse</td><td class="num">3.196 €</td></tr>
+          <tr><td>Voli interni</td><td>Tre tratte, bagagli inclusi</td><td class="num">500 – 900 €</td></tr>
+          <tr><td>Alloggi</td><td>22 notti, con le quattro di Melbourne già bloccate a 403 €</td><td class="num">3.200 – 3.830 €</td></tr>
+          <tr><td>Auto e treni</td><td>Great Ocean Road, Newcastle→Brisbane a senso unico, trasferimenti in Queensland. I treni sono spiccioli</td><td class="num">1.100 – 1.600 €</td></tr>
+          <tr><td>Escursioni ed esperienze</td><td>Barriera, Whitehaven, volo su Heart Reef. Il capodanno non c'è più</td><td class="num">900 – 1.600 €</td></tr>
+          <tr><td>Vitto, benzina, extra</td><td>Circa 100–140 € al giorno in due, su 25 giorni</td><td class="num">2.500 – 3.500 €</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td>Totale</td><td>Fascia alta = tutte le scelte «belle»</td><td class="num">11.400 – 14.600 €</td></tr>
+        </tfoot>
+      </table>
+    </div>
+  </section>
+
+  <footer>
+    <hr class="rule" style="margin-bottom:2rem">
+    <p>I voli intercontinentali sono acquistati e le date sono fisse. Restano da riconfermare gli <b>orari</b>: le compagnie ritoccano gli operativi sulla stagione australe, e quello di Etihad su Melbourne è cambiato più volte — la partenza delle 18:20 tutti i giorni vale dalla stagione invernale che apre il 25 ottobre 2026. Tutti gli altri prezzi di questa pagina sono indicativi, non preventivi.</p>
+  </footer>
+
+</div>
