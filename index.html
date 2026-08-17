@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Australia — Viaggio di nozze</title>
+
+<style>
+  :root {
+    --paper:      #F0F3F0;
+    --surface:    #FFFFFF;
+    --surface-2:  #E4EAE7;
+    --ink:        #0C252C;
+    --ink-soft:   #3A5A61;
+    --muted:      #6B8189;
+    --rule:       #C7D3D1;
+    --accent:     #0B7D8E;
+    --accent-ink: #085C69;
+    --accent-wash:#DDEDEF;
+
+    --f-display: "Avenir Next", "Avenir", "Futura", "Century Gothic", "Trebuchet MS", sans-serif;
+    --f-body: "Charter", "Iowan Old Style", Georgia, "Palatino Linotype", "Book Antiqua", serif;
+    --f-data: "SF Mono", "Cascadia Mono", Consolas, "DejaVu Sans Mono", Menlo, monospace;
+
+    --measure: 40rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper:      #08161A;
+      --surface:    #0E2229;
+      --surface-2:  #16323A;
+      --ink:        #DCE8E7;
+      --ink-soft:   #A8C0C1;
+      --muted:      #7A959A;
+      --rule:       #23434C;
+      --accent:     #3FB6C7;
+      --accent-ink: #7FD4E0;
+      --accent-wash:#0F343C;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--f-body);
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .wrap {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 4.5rem 1.25rem 6rem;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  header.masthead {
+    margin-bottom: 3rem;
+  }
+
+  .eyebrow {
+    font-family: var(--f-data);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  h1 {
+    font-family: var(--f-display);
+    font-size: clamp(2.2rem, 6vw, 3.4rem);
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0.5rem 0 0.75rem;
+    text-wrap: balance;
+  }
+
+  .dek {
+    font-size: 1.08rem;
+    color: var(--ink-soft);
+    max-width: 34rem;
+    margin: 0;
+  }
+
+  h2.section-title {
+    font-family: var(--f-display);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    margin: 3rem 0 1.1rem;
+  }
+
+  .stops {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .stop {
+    display: grid;
+    grid-template-columns: 6.5rem 1fr;
+    gap: 1.25rem;
+    align-items: start;
+    padding: 1.4rem 1.5rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .stop:hover, .stop:focus-visible {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .stop .when {
+    font-family: var(--f-data);
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
+    padding-top: 0.2rem;
+  }
+
+  .stop .when b {
+    display: block;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+  }
+
+  .stop h3 {
+    font-family: var(--f-display);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 0 0 0.3rem;
+  }
+
+  .stop p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+  }
+
+  .stop .nights {
+    font-family: var(--f-data);
+    font-size: 0.72rem;
+    color: var(--accent-ink);
+  }
+
+  .more {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .more a {
+    font-family: var(--f-data);
+    font-size: 0.82rem;
+    color: var(--accent-ink);
+    background: var(--accent-wash);
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: 0.5rem 1rem;
+  }
+
+  .more a:hover { border-color: var(--accent); }
+
+  footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+
+  @media (max-width: 34rem) {
+    .stop { grid-template-columns: 1fr; gap: 0.3rem; }
+    .stop .when { display: flex; align-items: baseline; gap: 0.5rem; }
+    .stop .when b { display: inline; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="masthead">
+      <p class="eyebrow">Viaggio di nozze · 25 giorni · estate australe</p>
+      <h1>Dove andiamo</h1>
+      <p class="dek">Roma → Australia, dal 28 dicembre 2026 al 21 gennaio 2027. Scegliete una tappa per saltare direttamente al suo pezzo di itinerario.</p>
+    </header>
+
+    <h2 class="section-title">Le tappe, in ordine</h2>
+    <nav class="stops" aria-label="Tappe del viaggio">
+      <a class="stop" href="australia-nozze.html#leg-melbourne">
+        <span class="when"><b>29 dic–2 gen</b>4 notti</span>
+        <span>
+          <h3>Melbourne</h3>
+          <p>Il capodanno, i laneways, le Celebration Zones gratuite in riva al fiume.</p>
+        </span>
+      </a>
+
+      <a class="stop" href="australia-nozze.html#leg-sydney">
+        <span class="when"><b>2–6 gen</b>4 notti</span>
+        <span>
+          <h3>Sydney</h3>
+          <p>Il porto, la costiera Bondi–Coogee, le Blue Mountains in treno.</p>
+        </span>
+      </a>
+
+      <a class="stop" href="australia-nozze.html#leg-costa-nord">
+        <span class="when"><b>6–11 gen</b>5 notti</span>
+        <span>
+          <h3>La risalita costiera</h3>
+          <p>In auto da Newcastle a Byron Bay: Port Macquarie, Sawtell, e una giornata intera senza guidare.</p>
+        </span>
+      </a>
+
+      <a class="stop" href="australia-nozze.html#leg-whitsundays">
+        <span class="when"><b>11–17 gen</b>6 notti</span>
+        <span>
+          <h3>Whitsundays</h3>
+          <p>Una base sola ad Airlie Beach, Whitehaven Beach e la Barriera Corallina.</p>
+        </span>
+      </a>
+
+      <a class="stop" href="australia-nozze.html#leg-gor">
+        <span class="when"><b>17–20 gen</b>3 notti</span>
+        <span>
+          <h3>Great Ocean Road</h3>
+          <p>Il congedo: Twelve Apostles, Loch Ard Gorge, i koala di Kennett River.</p>
+        </span>
+      </a>
+    </nav>
+
+    <h2 class="section-title">Il resto del piano</h2>
+    <div class="more">
+      <a href="australia-nozze.html#verifiche">Le decisioni</a>
+      <a href="australia-nozze.html#voli">I voli</a>
+      <a href="australia-nozze.html#mappa">La mappa</a>
+      <a href="australia-nozze.html#immagini">Com'è fatto ogni posto</a>
+      <a href="australia-nozze.html#alloggi">Dove dormire</a>
+      <a href="australia-nozze.html#prenotazioni">Cosa prenotare</a>
+      <a href="australia-nozze.html#pratico">Pratica</a>
+      <a href="australia-nozze.html#budget">Budget</a>
+    </div>
+
+    <footer>
+      <p>Ventidue notti, tutte in Australia.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
